@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name="hosseinzafari.github.sales.ui.activity.MainActivity">
+        <activity android:name=".core.GAppCompatActivity"/>
+
+        <activity android:name="hosseinzafari.github.sales.ui.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
