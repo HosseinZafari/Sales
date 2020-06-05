@@ -30,6 +30,7 @@ import androidx.annotation.Nullable;
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.util.UtilActivity;
 
 
 class SplashActivity extends GAppCompatActivity {
@@ -39,7 +40,9 @@ class SplashActivity extends GAppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        new UtilActivity()
+                .fullScreen()
+                .setContentView(R.layout.activity_splash);
 
         G.handler.postDelayed(() -> {
 
