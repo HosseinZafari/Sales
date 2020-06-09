@@ -24,15 +24,15 @@
 package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 
 import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
 
-
-class SplashActivity extends GAppCompatActivity {
+class SplashActivity extends AppCompatActivity {
 
     private static final long TIME_DELAY = 3000;
 
@@ -41,12 +41,14 @@ class SplashActivity extends GAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        G.handler.postDelayed(() -> {
-
-            // TODO Logic this here
-
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(SplashActivity.this, "hhtfg", Toast.LENGTH_SHORT).show();
+                //  startActivity(new Intent(SplashActivity.this,G.class));
+            }
         }, TIME_DELAY);
+
     }
-
-
 }

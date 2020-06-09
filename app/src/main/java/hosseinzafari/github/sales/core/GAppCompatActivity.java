@@ -34,10 +34,11 @@ package hosseinzafari.github.sales.core;
  * we do must extends this class .
  */
 
+import android.app.Application;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class GAppCompatActivity extends AppCompatActivity {
 

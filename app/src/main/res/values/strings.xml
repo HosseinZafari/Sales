@@ -22,5 +22,5 @@
   -->
 
 <resources>
-  <string name="app_name">Sales</string>
+    <string name="app_name">Sales</string>
 </resources>
