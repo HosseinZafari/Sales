@@ -31,15 +31,47 @@ package hosseinzafari.github.sales.util;
 */
 
 import android.content.Intent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
 import hosseinzafari.github.sales.core.G;
+import hosseinzafari.github.sales.core.GAppCompatActivity;
 
 public class UtilActivity {
 
-     public static void goActivity(@NotNull Class clazz){
-         G.appCompatActivity.startActivity(new Intent(G.appCompatActivity , clazz));
-     }
+    public static GAppCompatActivity appCompatActivity = G.appCompatActivity;
+
+
+    public UtilActivity fullScreen() {
+        appCompatActivity.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        appCompatActivity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN , WindowManager.LayoutParams.FLAG_FULLSCREEN) ;
+        return this;
+    }
+
+    public UtilActivity setContentView(@LayoutRes int id){
+        appCompatActivity.setContentView(id);
+        return this;
+    }
+
+    public UtilActivity setContentView(@NotNull View view){
+        appCompatActivity.setContentView(view);
+        return this;
+    }
+
+    public UtilActivity setContentView(@NonNull View view , @NonNull ViewGroup.LayoutParams layouParams){
+        appCompatActivity.setContentView(view , layouParams);
+        return this;
+    }
+
+    public static void goActivity(@NotNull Class clazz) {
+        appCompatActivity.startActivity(new Intent(G.appCompatActivity, clazz));
+    }
 
 }

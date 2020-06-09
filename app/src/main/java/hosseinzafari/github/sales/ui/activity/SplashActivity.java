@@ -31,6 +31,12 @@ import android.widget.Toast;
 
 
 import hosseinzafari.github.sales.R;
+<<<<<<< HEAD
+=======
+import hosseinzafari.github.sales.core.G;
+import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.util.UtilActivity;
+>>>>>>> 1386aac0e61be4921b10bb616fb68e4656400bf8
 
 class SplashActivity extends AppCompatActivity {
 
@@ -39,7 +45,9 @@ class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        new UtilActivity()
+                .fullScreen()
+                .setContentView(R.layout.activity_splash);
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
