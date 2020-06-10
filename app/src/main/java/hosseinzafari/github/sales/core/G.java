@@ -34,20 +34,18 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class G extends Application {
 
     public static Handler handler;
     public static Context context;
-    public static AppCompatActivity appCompatActivity;
+    public static GAppCompatActivity appCompatActivity;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         context = getApplicationContext();
-        handler = handler;
+        handler = new Handler();
     }
 
 }
