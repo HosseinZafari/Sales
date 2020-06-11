@@ -22,25 +22,25 @@
  */
 
 package hosseinzafari.github.sales.core;
-/*
-@created in 04/06/2020 - 6:24 PM
-@project Sales
-@author Hossein Zafari 
-@email  hosseinzafari2000@gmail.com 
-*/
-
 /**
+ *@created in 04/06/2020 - 6:24 PM
+ *@project Sales
+ *@author Hossein Zafari
+ *@email  hosseinzafari2000@gmail.com
  * this is a base Activity and we can config this before another Acitvityes
  * we do must extends this class .
  */
 
-import android.app.Application;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import hosseinzafari.github.sales.util.UtilActivity;
 
 public class GAppCompatActivity extends AppCompatActivity {
+
+    protected UtilActivity founder = new UtilActivity();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
