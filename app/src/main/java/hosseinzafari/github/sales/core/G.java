@@ -41,6 +41,7 @@ public class G extends Application{
     public static Context context;
     public static GAppCompatActivity appCompatActivity;
     public static String packageName ;
+    public static String TAG = "Test";
 
     @Override
     public void onCreate() {

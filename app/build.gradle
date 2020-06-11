@@ -31,7 +31,7 @@ android {
 
     defaultConfig {
         applicationId "hosseinzafari.github.sales"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
