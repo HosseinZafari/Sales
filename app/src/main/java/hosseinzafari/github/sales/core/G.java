@@ -33,21 +33,22 @@ package hosseinzafari.github.sales.core;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 
 
 public class G extends Application{
 
     public static Handler handler;
     public static Context context;
-    public static AppCompatActivity appCompatActivity;
+    public static GAppCompatActivity appCompatActivity;
+    public static String packageName ;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         context = getApplicationContext();
-        handler = handler;
+        handler = new Handler();
+        packageName = getPackageName();
     }
 
 }
