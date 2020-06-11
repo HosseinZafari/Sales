@@ -24,9 +24,7 @@
 package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
-
 import androidx.annotation.Nullable;
-
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
