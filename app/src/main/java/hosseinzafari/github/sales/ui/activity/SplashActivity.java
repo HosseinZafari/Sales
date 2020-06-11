@@ -24,39 +24,28 @@
 package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 
 import hosseinzafari.github.sales.R;
-<<<<<<< HEAD
-=======
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.util.UtilActivity;
->>>>>>> 1386aac0e61be4921b10bb616fb68e4656400bf8
+import hosseinzafari.github.sales.util.GLog;
 
-class SplashActivity extends AppCompatActivity {
+class SplashActivity extends GAppCompatActivity {
 
     private static final long TIME_DELAY = 3000;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new UtilActivity()
-                .fullScreen()
+        founder.fullScreen()
                 .setContentView(R.layout.activity_splash);
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(SplashActivity.this, "hhtfg", Toast.LENGTH_SHORT).show();
-                //  startActivity(new Intent(SplashActivity.this,G.class));
-            }
-        }, TIME_DELAY);
+        G.handler.postDelayed(
+                () -> {
+                    GLog.i("Start SplashScreen");
+                }, TIME_DELAY);
 
     }
 }
