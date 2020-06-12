@@ -14,11 +14,11 @@ import hosseinzafari.github.sales.core.G;
 public class GLog {
     
     private static final String TAG = G.TAG;
-    private static final byte VERBOSE = 1,
-    private static final byte DEBUG = 2,
-    private static final byte INFO = 3,
-    private static final byte WARNING = 4,
-    private static final byte ERROR = 5,
+    private static final byte VERBOSE = 1;
+    private static final byte DEBUG = 2;
+    private static final byte INFO = 3;
+    private static final byte WARNING = 4;
+    private static final byte ERROR = 5;
 
 
     public static void v(String tag , String message){
