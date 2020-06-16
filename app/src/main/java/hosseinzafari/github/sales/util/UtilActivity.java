@@ -46,7 +46,7 @@ import hosseinzafari.github.sales.core.GAppCompatActivity;
 
 public class UtilActivity {
 
-    public static GAppCompatActivity appCompatActivity = G.appCompatActivity;
+    public GAppCompatActivity appCompatActivity = G.appCompatActivity;
 
 
     public UtilActivity fullScreen() {
@@ -71,7 +71,7 @@ public class UtilActivity {
     }
 
     public static void goActivity(@NotNull Class clazz) {
-        appCompatActivity.startActivity(new Intent(G.appCompatActivity, clazz));
+        G.appCompatActivity.startActivity(new Intent(G.appCompatActivity, clazz));
     }
 
 }
