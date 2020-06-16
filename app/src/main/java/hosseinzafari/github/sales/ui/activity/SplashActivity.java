@@ -30,7 +30,7 @@ import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
 import hosseinzafari.github.sales.util.GLog;
 
-class SplashActivity extends GAppCompatActivity {
+public class SplashActivity extends GAppCompatActivity {
 
     private static final long TIME_DELAY = 3000;
 
