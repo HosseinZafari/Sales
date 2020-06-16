@@ -42,4 +42,15 @@
     <dimen name="padding_std">8dp</dimen>
     <dimen name="padding_low">4dp</dimen>
 
+
+
+    <!-- for font -->
+    <dimen name="font_sx">8dp</dimen>
+    <dimen name="font_sm">12dp</dimen>
+    <dimen name="font_md">14dp</dimen>
+    <dimen name="font_lg">16dp</dimen>
+    <dimen name="font_xlg">18dp</dimen>
+    <dimen name="font_xxlg">20dp</dimen>
+    <dimen name="font_xxxlg">24dp</dimen>
+
 </resources>
