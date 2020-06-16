@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ly_lo"
+        android:layout_height="320dp"
+        android:orientation="horizontal"
+        android:background="@drawable/location_access_activity_background">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="130dp"
+
+            android:src="@drawable/location_icon"></ImageView>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_location"
+        android:layout_below="@id/ly_lo"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:fontFamily="@font/iran_bold"
+        android:text="اگر میخواهید از تخفیف های نزدیک خود مطلع شوید دسترسی مکان را فعال کنید ."
+        android:textDirection="rtl"
+        android:textSize="19sp"
+        android:gravity="center_horizontal"
+
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_location"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_enter"
+            android:layout_width="345dp"
+            android:layout_height="71dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"
+            android:background="#F0F45F6A"
+            android:fontFamily="@font/iran_medium"
+            android:text="تایید"
+            android:textSize="18sp"></Button>
+
+        <Button
+            android:layout_width="345dp"
+            android:layout_height="71dp"
+            android:background="@drawable/btn_location_background"
+            android:baselineAligned="false"
+            android:fontFamily="@font/iran_medium"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="الان نه شاید بعدا"
+            android:textColor="#F0F45F6A"
+            android:textSize="18sp"></Button>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
