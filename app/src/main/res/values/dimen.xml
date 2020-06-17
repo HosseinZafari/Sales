@@ -29,6 +29,7 @@
     <dimen name="horizontal_margin_standard">16dp</dimen>
 
     <!--for margins-->
+    <dimen name="margin_highx4">26dp</dimen>
     <dimen name="margin_highx3">22dp</dimen>
     <dimen name="margin_highx2">16dp</dimen>
     <dimen name="margin_high">12dp</dimen>
