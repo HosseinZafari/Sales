@@ -28,8 +28,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import hosseinzafari.github.sales.R;
+import hosseinzafari.github.sales.core.GAppCompatActivity;
 
-public class activityStart extends AppCompatActivity {
+public class StartActivity extends GAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
