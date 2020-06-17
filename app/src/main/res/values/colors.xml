@@ -25,7 +25,16 @@
 <resources>
   <color name="colorPrimary">#FF5A5F</color>
   <color name="colorPrimaryDark">#E1383D</color>
-  <color name="colorAccent">#0091EA</color>
+  <color name="colorAccent">#FF8083</color>
+
+  <color name="colorDark">#000</color>
+  <color name="colorDarkMedium">#111</color>
+  <color name="colorDarkLight">#333</color>
+  <color name="colorGrayDark">#555</color>
+  <color name="colorGray4">#777</color>
+  <color name="colorGray3">#999</color>
+  <color name="colorGray2">#aaa</color>
+  <color name="colorGray1">#bbb</color>
 
 
 <!--List of Colors-->
