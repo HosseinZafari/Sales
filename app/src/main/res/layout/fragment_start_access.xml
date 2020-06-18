@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ly_lo"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/location_access_activity_background"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="@dimen/margin_std"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/ic_location">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_lo"
+        android:layout_marginTop="@dimen/margin_highx2"
+        android:gravity="center_horizontal"
+        android:paddingLeft="40dp"
+        android:paddingTop="@dimen/padding_highx2"
+        android:paddingRight="40dp"
+        android:paddingBottom="@dimen/padding_highx2"
+        android:text="اگر میخواهید از تخفیفان های نزدیک خود مطلع شوید، دسترسی Location را فعال کنید." />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_location"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_highx4">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enter_location"
+            style="@style/Button_Normal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/margin_std"
+            android:text="تایید"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_not_now_enter_location"
+            style="@style/Button_outline"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="@dimen/margin_std"
+            android:baselineAligned="false"
+            android:text="الان نه، شاید بعدا" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
