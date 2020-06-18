@@ -21,35 +21,45 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
-/*
+package hosseinzafari.github.sales.data.local.memory
 
-@created in 04/06/2020 - 1:14 PM
+/*
+@created in 17/06/2020 - 9:33 AM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-
-
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
-    }
-
-}
+fun getCityData() = listOf(
+       " آذربایجان شرقی"    ,
+       " آذربایجان غربی"        ,
+       " اردبیل"   ,
+       " اصفهان"            ,
+       "البرز"  ,
+       "ایلام"            ,
+       "بوشهر"            ,
+       "تهران"   ,
+       " چهارمحال و بختیاری"    ,
+       " خراسان جنوبی"          ,
+       " خراسان رضوی"   ,
+       " خراسان شمالی"   ,
+       "خوزستان" ,
+       "زنجان" ,
+       "سمنان" ,
+       " سیستان و بلوچستان"     ,
+       "فارس" ,
+       "قزوین" ,
+       "قم" ,
+       "کردستان" ,
+       "کرمان" ,
+       "کرمانشاه" ,
+       " کهگیلویه و بویراحمد"   ,
+       "گلستان" ,
+       "گیلان" ,
+       "لرستان" ,
+       "مازندران" ,
+       "مرکزی" ,
+       "هرمزگان" ,
+       "همدان" ,
+       "یزد"
+)

@@ -9,6 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.StartActivity"></activity>
         <activity android:name=".core.GAppCompatActivity" />
         <activity android:name=".ui.activity.SplashActivity">
             <intent-filter>

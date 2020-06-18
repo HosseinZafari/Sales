@@ -21,35 +21,20 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
-/*
+package hosseinzafari.github.sales.ui.activity;
 
-@created in 04/06/2020 - 1:14 PM
-@project Sales
-@author Hossein Zafari 
-@email  hosseinzafari2000@gmail.com 
-*/
+import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
+import android.os.Bundle;
 
+import hosseinzafari.github.sales.R;
+import hosseinzafari.github.sales.core.GAppCompatActivity;
 
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
+public class StartActivity extends GAppCompatActivity {
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start);
     }
-
 }

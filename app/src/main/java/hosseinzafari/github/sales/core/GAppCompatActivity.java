@@ -40,7 +40,7 @@ import hosseinzafari.github.sales.util.UtilActivity;
 
 public class GAppCompatActivity extends AppCompatActivity {
 
-    protected UtilActivity founder = new UtilActivity();
+    protected UtilActivity founder;;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,5 +48,6 @@ public class GAppCompatActivity extends AppCompatActivity {
 
         // set current activity for access it and use easy another classes
         G.appCompatActivity = this;
+        founder = new UtilActivity();
     }
 }
