@@ -37,6 +37,7 @@
     <dimen name="margin_low">4dp</dimen>
 
     <!--for paddings-->
+    <dimen name="padding_highx4">26dp</dimen>
     <dimen name="padding_highx3">22dp</dimen>
     <dimen name="padding_highx2">16dp</dimen>
     <dimen name="padding_high">12dp</dimen>

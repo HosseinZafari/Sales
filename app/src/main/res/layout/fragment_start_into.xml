@@ -47,7 +47,7 @@
         android:textSize="@dimen/font_lg" />
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Bottom_Normal_Light"
+        style="@style/Button_Normal_Light"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"

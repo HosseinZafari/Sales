@@ -85,7 +85,7 @@
             android:layout_gravity="bottom"
             android:layout_marginTop="@dimen/margin_high"
             android:text="ادامه"
-            style="@style/Bottom_Normal" />
+            style="@style/Button_Normal" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
