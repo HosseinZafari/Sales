@@ -29,7 +29,6 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
-
     <item name="fontFamily">@font/iran</item>
     <item name="android:textSize">@dimen/font_md</item>
   </style>
@@ -42,8 +41,8 @@
     <item name="android:gravity">center</item>
     <item name="android:textColor">@color/colorPrimary</item>
     <item name="backgroundTint">@color/white</item>
-    <item name="cornerRadius">5dp</item>
-    <item name="rippleColor">@color/colorPrimary</item>
+    <item name="cornerRadius">4dp</item>
+    <item name="rippleColor">@color/colorPrimaryDark</item>
     <item name="elevation">4dp</item>
   </style>
 

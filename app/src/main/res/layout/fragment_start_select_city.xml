@@ -27,8 +27,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="@dimen/padding_highx2"
-    tools:context="ui.activity.SplashActivity">
+    android:padding="@dimen/padding_highx2">
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -43,13 +42,14 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/txt_"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_highx2"
             android:gravity="center"
             android:text="برای نمایش تخفیفان ها ، شهر خود را را انتخاب کنید."
-            android:textColor="@color/colorGrayDark"
-            android:textSize="@dimen/font_xlg" />
+            app:fontFamily="@font/iran_light"
+            android:textColor="@color/colorDarkMedium"
+            android:textSize="@dimen/font_sm" />
 
         <View
             android:layout_width="match_parent"
@@ -76,13 +76,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="@dimen/margin_std"
+            tools:listitem="@layout/item_city"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="@dimen/margin_std"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/margin_high"
             android:text="ادامه"
             style="@style/Bottom_Normal" />
 
