@@ -33,6 +33,9 @@ package hosseinzafari.github.sales.core;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
+import android.view.LayoutInflater;
+
+import hosseinzafari.github.sales.util.GLog;
 
 
 public class G extends Application{
@@ -42,6 +45,7 @@ public class G extends Application{
     public static GAppCompatActivity appCompatActivity;
     public static String packageName ;
     public static String TAG = "Test";
+    private static LayoutInflater layoutInflater;
 
     @Override
     public void onCreate() {
@@ -52,4 +56,13 @@ public class G extends Application{
         packageName = getPackageName();
     }
 
+    public static LayoutInflater getLayoutInflater(){
+        if (layoutInflater == null) {
+            GLog.i("layoutInflater1 is Null");
+            layoutInflater = LayoutInflater.from(appCompatActivity);
+        }
+            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
+
+        return layoutInflater;
+    }
 }

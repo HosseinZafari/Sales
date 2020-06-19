@@ -21,39 +21,47 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.ui.activity;
+package hosseinzafari.github.sales.ui.fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
-import hosseinzafari.github.sales.util.GLog;
-import hosseinzafari.github.sales.util.UtilActivity;
+import hosseinzafari.github.sales.adapter.RecyclerViewCityAdapter;
+import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
 
-public class SplashActivity extends GAppCompatActivity {
+/*
 
-    private static final long TIME_DELAY = 3000;
+@created in 19/06/2020 - 10:14 AM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
+public class StartSelectCityFragment extends Fragment {
+
+    private RecyclerView recyclerView;
+    private RecyclerViewCityAdapter adapter;
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        founder.fullScreen()
-                .setContentView(R.layout.activity_splash);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        adapter = new RecyclerViewCityAdapter(GDataMemoryKt.getCityData());
 
-        G.handler.postDelayed(() -> {
-                    GLog.i("Start SplashScreen");
-                    checkSubmited();
-                }, TIME_DELAY);
-
+        return inflater.inflate(R.layout.fragment_start_select_city , container , false);
     }
 
-    private void checkSubmited(){
-        if(GSharedPref.isSubmit()){
-            UtilActivity.goActivity(MainActivity.class);
-        } else {
-            UtilActivity.goActivity(StartActivity.class);
-        }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        recyclerView = view.findViewById(R.id.rv_city);
+
+        recyclerView.setAdapter(adapter);
     }
 }

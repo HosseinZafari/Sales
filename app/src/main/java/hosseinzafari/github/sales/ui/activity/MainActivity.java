@@ -24,36 +24,16 @@
 package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
-import androidx.annotation.Nullable;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
-import hosseinzafari.github.sales.util.GLog;
-import hosseinzafari.github.sales.util.UtilActivity;
 
-public class SplashActivity extends GAppCompatActivity {
-
-    private static final long TIME_DELAY = 3000;
+public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        founder.fullScreen()
-                .setContentView(R.layout.activity_splash);
-
-        G.handler.postDelayed(() -> {
-                    GLog.i("Start SplashScreen");
-                    checkSubmited();
-                }, TIME_DELAY);
-
-    }
-
-    private void checkSubmited(){
-        if(GSharedPref.isSubmit()){
-            UtilActivity.goActivity(MainActivity.class);
-        } else {
-            UtilActivity.goActivity(StartActivity.class);
-        }
+        setContentView(R.layout.activity_main);
     }
 }

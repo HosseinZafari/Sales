@@ -21,35 +21,45 @@
   ~ SOFTWARE.
   -->
 
-<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.cardview.CircularRevealCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/padding_std">
+    app:chainUseRtl="true"
+    app:rippleColor="@color/colorGray1"
+    app:cardElevation="1dp"
+    >
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_name_city"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:textSize="@dimen/font_md"
-        app:fontFamily="@font/iran_light"
-        tools:text="تهران" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/img_selected_city"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        app:srcCompat="@drawable/ic_tick" />
-
-
-    <View
+    <com.google.android.material.circularreveal.CircularRevealRelativeLayout
+        android:padding="@dimen/padding_std"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@id/img_selected_city"
-        android:layout_marginTop="@dimen/margin_highx3"
-        android:background="@color/colorGray1" />
+        android:layout_height="match_parent">
 
-</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/font_sm"
+            app:fontFamily="@font/iran"
+            tools:text="تهران" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_selected_city"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_tick" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_high"
+            android:layout_below="@id/txt_name_city"
+            android:background="@color/colorGray" />
+
+    </com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+</com.google.android.material.circularreveal.cardview.CircularRevealCardView>

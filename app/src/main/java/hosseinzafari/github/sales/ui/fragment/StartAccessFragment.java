@@ -21,39 +21,32 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.ui.activity;
+package hosseinzafari.github.sales.ui.fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
-import hosseinzafari.github.sales.util.GLog;
-import hosseinzafari.github.sales.util.UtilActivity;
 
-public class SplashActivity extends GAppCompatActivity {
+/*
 
-    private static final long TIME_DELAY = 3000;
+@created in 19/06/2020 - 10:14 AM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
+public class StartAccessFragment extends Fragment {
+
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        founder.fullScreen()
-                .setContentView(R.layout.activity_splash);
-
-        G.handler.postDelayed(() -> {
-                    GLog.i("Start SplashScreen");
-                    checkSubmited();
-                }, TIME_DELAY);
-
-    }
-
-    private void checkSubmited(){
-        if(GSharedPref.isSubmit()){
-            UtilActivity.goActivity(MainActivity.class);
-        } else {
-            UtilActivity.goActivity(StartActivity.class);
-        }
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_start_access , container , false);
     }
 }

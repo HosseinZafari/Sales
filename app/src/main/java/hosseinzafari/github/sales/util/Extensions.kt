@@ -21,39 +21,21 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.ui.activity;
+package hosseinzafari.github.sales.util
 
-import android.os.Bundle;
-import androidx.annotation.Nullable;
-import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
-import hosseinzafari.github.sales.util.GLog;
-import hosseinzafari.github.sales.util.UtilActivity;
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
+import hosseinzafari.github.sales.core.G
 
-public class SplashActivity extends GAppCompatActivity {
+/*
+@created in 19/06/2020 - 1:11 PM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
-    private static final long TIME_DELAY = 3000;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        founder.fullScreen()
-                .setContentView(R.layout.activity_splash);
-
-        G.handler.postDelayed(() -> {
-                    GLog.i("Start SplashScreen");
-                    checkSubmited();
-                }, TIME_DELAY);
-
-    }
-
-    private void checkSubmited(){
-        if(GSharedPref.isSubmit()){
-            UtilActivity.goActivity(MainActivity.class);
-        } else {
-            UtilActivity.goActivity(StartActivity.class);
-        }
-    }
-}
+/*
+ * A Helper Function for Convert xml to Java View Class.
+ */
+fun ViewGroup.inflate(@LayoutRes layoutRes: Int) = G.getLayoutInflater().inflate(layoutRes , this , false);

@@ -21,39 +21,37 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.ui.activity;
+package hosseinzafari.github.sales.struct;
+/*
 
-import android.os.Bundle;
-import androidx.annotation.Nullable;
-import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.core.G;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
-import hosseinzafari.github.sales.util.GLog;
-import hosseinzafari.github.sales.util.UtilActivity;
+@created in 19/06/2020 - 4:07 PM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
-public class SplashActivity extends GAppCompatActivity {
+public class CityModel {
+    private int id;
+    private String name;
 
-    private static final long TIME_DELAY = 3000;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        founder.fullScreen()
-                .setContentView(R.layout.activity_splash);
-
-        G.handler.postDelayed(() -> {
-                    GLog.i("Start SplashScreen");
-                    checkSubmited();
-                }, TIME_DELAY);
-
+    public CityModel(int id , String name){
+        this.id = id;
+        this.name = name;
     }
 
-    private void checkSubmited(){
-        if(GSharedPref.isSubmit()){
-            UtilActivity.goActivity(MainActivity.class);
-        } else {
-            UtilActivity.goActivity(StartActivity.class);
-        }
+    public void setId(int id){
+        this.id = id;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getId(){
+        return id;
     }
 }
