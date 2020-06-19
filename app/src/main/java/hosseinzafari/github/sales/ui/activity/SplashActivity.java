@@ -28,7 +28,9 @@ import androidx.annotation.Nullable;
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 import hosseinzafari.github.sales.util.GLog;
+import hosseinzafari.github.sales.util.UtilActivity;
 
 public class SplashActivity extends GAppCompatActivity {
 
@@ -40,10 +42,18 @@ public class SplashActivity extends GAppCompatActivity {
         founder.fullScreen()
                 .setContentView(R.layout.activity_splash);
 
-        G.handler.postDelayed(
-                () -> {
+        G.handler.postDelayed(() -> {
                     GLog.i("Start SplashScreen");
+                    checkSubmited();
                 }, TIME_DELAY);
 
+    }
+
+    private void checkSubmited(){
+        if(GSharedPref.isSubmit()){
+            UtilActivity.goActivity(MainActivity.class);
+        } else {
+            UtilActivity.goActivity(StartActivity.class);
+        }
     }
 }
