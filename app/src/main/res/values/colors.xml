@@ -34,7 +34,9 @@
   <color name="colorGray4">#777</color>
   <color name="colorGray3">#999</color>
   <color name="colorGray2">#aaa</color>
-  <color name="colorGray1">#bbb</color>
+  <color name="colorGray1">#ccc</color>
+  <color name="colorGray">#ddd</color>
+  <color name="colorWhite">#eee</color>
 
 
 <!--List of Colors-->
