@@ -47,7 +47,7 @@
         <item name="android:textAppearance">?attr/textAppearanceButton</item>
         <item name="android:paddingTop">@dimen/padding_low </item>
         <item name="android:paddingBottom">@dimen/padding_low </item>
-        <item name="fontFamily">@font/iran_ultra_light</item>
+        <item name="fontFamily">@font/iran_medium</item>
     </style>
 
     <style name="Button_Normal" parent="Button_Normal_Light">
@@ -57,7 +57,7 @@
 
     <style name="Button_outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="strokeColor">@color/colorAccent</item>
+        <item name="strokeColor">@color/colorPrimary</item>
         <item name="android:textAppearance">?attr/textAppearanceButton</item>
         <item name="textAllCaps">false</item>
         <item name="android:clickable">true</item>
@@ -69,7 +69,7 @@
         <item name="android:paddingTop">@dimen/padding_low </item>
         <item name="android:paddingBottom">@dimen/padding_low </item>
         <item name="strokeWidth">1dp</item>
-        <item name="fontFamily">@font/iran_light</item>
+        <item name="fontFamily">@font/iran_medium</item>
     </style>
 
 </resources>

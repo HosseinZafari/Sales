@@ -23,6 +23,8 @@
 
 package hosseinzafari.github.sales.data.local.memory
 
+import hosseinzafari.github.sales.struct.CityModel
+
 /*
 @created in 17/06/2020 - 9:33 AM
 @project Sales
@@ -31,35 +33,35 @@ package hosseinzafari.github.sales.data.local.memory
 */
 
 fun getCityData() = listOf(
-       " آذربایجان شرقی"    ,
-       " آذربایجان غربی"        ,
-       " اردبیل"   ,
-       " اصفهان"            ,
-       "البرز"  ,
-       "ایلام"            ,
-       "بوشهر"            ,
-       "تهران"   ,
-       " چهارمحال و بختیاری"    ,
-       " خراسان جنوبی"          ,
-       " خراسان رضوی"   ,
-       " خراسان شمالی"   ,
-       "خوزستان" ,
-       "زنجان" ,
-       "سمنان" ,
-       " سیستان و بلوچستان"     ,
-       "فارس" ,
-       "قزوین" ,
-       "قم" ,
-       "کردستان" ,
-       "کرمان" ,
-       "کرمانشاه" ,
-       " کهگیلویه و بویراحمد"   ,
-       "گلستان" ,
-       "گیلان" ,
-       "لرستان" ,
-       "مازندران" ,
-       "مرکزی" ,
-       "هرمزگان" ,
-       "همدان" ,
-       "یزد"
+      CityModel(1 ,  " آذربایجان شرقی" )  ,
+      CityModel(2 ,  " آذربایجان غربی")        ,
+      CityModel(3 ,  "اردبیل" )  ,
+      CityModel(4 ,  "اصفهان" )           ,
+      CityModel(5 ,  "البرز" ),
+      CityModel(6 ,  "ایلام"),
+      CityModel(7 ,  "بوشهر"),
+      CityModel(8 ,  "تهران"),
+      CityModel(9 ,  " چهارمحال و بختیاری"),
+      CityModel(10,  " خراسان جنوبی" )         ,
+      CityModel(11,  " خراسان رضوی")   ,
+      CityModel(12,  " خراسان شمالی")   ,
+      CityModel(13,  "خوزستان" ),
+      CityModel(14,  "زنجان" ),
+      CityModel(15,  "سمنان" ),
+      CityModel(16,  " سیستان و بلوچستان")     ,
+      CityModel(17,  "فارس" ),
+      CityModel(18,  "قزوین" ),
+      CityModel(19,  "قم" ),
+      CityModel(20,  "کردستان" ),
+      CityModel(21,  "کرمان" ),
+      CityModel(22,  "کرمانشاه" ),
+      CityModel(23,  " کهگیلویه و بویراحمد")   ,
+      CityModel(24,  "گلستان" ),
+      CityModel(25,  "گیلان" ),
+      CityModel(26,  "لرستان" ),
+      CityModel(27,  "مازندران" ),
+      CityModel(28,  "مرکزی" ),
+      CityModel(29,  "هرمزگان" ),
+      CityModel(30,  "همدان" ),
+      CityModel(31,  "یزد")
 )

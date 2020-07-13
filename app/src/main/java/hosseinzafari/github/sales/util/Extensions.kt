@@ -21,48 +21,21 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
-/*
+package hosseinzafari.github.sales.util
 
-@created in 04/06/2020 - 1:14 PM
+import android.view.ViewGroup
+import androidx.annotation.LayoutRes
+import hosseinzafari.github.sales.core.G
+
+/*
+@created in 19/06/2020 - 1:11 PM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-import android.view.LayoutInflater;
 
-import hosseinzafari.github.sales.util.GLog;
-
-
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-    private static LayoutInflater layoutInflater;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
-    }
-
-    public static LayoutInflater getLayoutInflater(){
-        if (layoutInflater == null) {
-            GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(appCompatActivity);
-        }
-            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
-
-        return layoutInflater;
-    }
-}
+/*
+ * A Helper Function for Convert xml to Java View Class.
+ */
+fun ViewGroup.inflate(@LayoutRes layoutRes: Int) = G.getLayoutInflater().inflate(layoutRes , this , false);

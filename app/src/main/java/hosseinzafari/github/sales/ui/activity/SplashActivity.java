@@ -23,7 +23,6 @@
 
 package hosseinzafari.github.sales.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import hosseinzafari.github.sales.R;
@@ -44,7 +43,6 @@ public class SplashActivity extends GAppCompatActivity {
         G.handler.postDelayed(
                 () -> {
                     GLog.i("Start SplashScreen");
-                    startActivity(new Intent(SplashActivity.this,MainActivity.class));
                 }, TIME_DELAY);
 
     }

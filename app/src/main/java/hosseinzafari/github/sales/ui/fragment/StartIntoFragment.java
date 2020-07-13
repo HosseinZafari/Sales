@@ -21,48 +21,32 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
+package hosseinzafari.github.sales.ui.fragment;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import hosseinzafari.github.sales.R;
+
 /*
 
-@created in 04/06/2020 - 1:14 PM
+@created in 19/06/2020 - 10:14 AM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-import android.view.LayoutInflater;
+public class StartIntoFragment extends Fragment {
 
-import hosseinzafari.github.sales.util.GLog;
-
-
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-    private static LayoutInflater layoutInflater;
-
+    @Nullable
     @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
-    }
-
-    public static LayoutInflater getLayoutInflater(){
-        if (layoutInflater == null) {
-            GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(appCompatActivity);
-        }
-            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
-
-        return layoutInflater;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_start_into , container , false);
     }
 }

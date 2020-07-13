@@ -21,48 +21,37 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
+package hosseinzafari.github.sales.struct;
 /*
 
-@created in 04/06/2020 - 1:14 PM
+@created in 19/06/2020 - 4:07 PM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-import android.view.LayoutInflater;
+public class CityModel {
+    private int id;
+    private String name;
 
-import hosseinzafari.github.sales.util.GLog;
-
-
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-    private static LayoutInflater layoutInflater;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
+    public CityModel(int id , String name){
+        this.id = id;
+        this.name = name;
     }
 
-    public static LayoutInflater getLayoutInflater(){
-        if (layoutInflater == null) {
-            GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(appCompatActivity);
-        }
-            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
+    public void setId(int id){
+        this.id = id;
+    }
 
-        return layoutInflater;
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getId(){
+        return id;
     }
 }

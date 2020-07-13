@@ -21,48 +21,47 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
+package hosseinzafari.github.sales.ui.fragment;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import hosseinzafari.github.sales.R;
+import hosseinzafari.github.sales.adapter.RecyclerViewCityAdapter;
+import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
+
 /*
 
-@created in 04/06/2020 - 1:14 PM
+@created in 19/06/2020 - 10:14 AM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-import android.view.LayoutInflater;
+public class StartSelectCityFragment extends Fragment {
 
-import hosseinzafari.github.sales.util.GLog;
+    private RecyclerView recyclerView;
+    private RecyclerViewCityAdapter adapter;
 
-
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity appCompatActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-    private static LayoutInflater layoutInflater;
-
+    @Nullable
     @Override
-    public void onCreate() {
-        super.onCreate();
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        adapter = new RecyclerViewCityAdapter(GDataMemoryKt.getCityData());
 
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
+        return inflater.inflate(R.layout.fragment_start_select_city , container , false);
     }
 
-    public static LayoutInflater getLayoutInflater(){
-        if (layoutInflater == null) {
-            GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(appCompatActivity);
-        }
-            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        recyclerView = view.findViewById(R.id.rv_city);
 
-        return layoutInflater;
+        recyclerView.setAdapter(adapter);
     }
 }
