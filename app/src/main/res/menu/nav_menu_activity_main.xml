@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ MIT License
   ~
@@ -21,8 +22,20 @@
   ~ SOFTWARE.
   -->
 
-<resources>
-    <string name="app_name">Sales</string>
-    <string name="OPEN">OPEN</string>
-    <string name="CLOSE">CLOSE</string>
-</resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:title="ورود" android:id="@+id/qwe" android:icon="@drawable/login"/>
+    <item android:title="عضویت" android:icon="@drawable/signup" />
+    <item android:title="" />
+    <item android:title="انتخاب دسته بندی" android:icon="@drawable/ic_bookmark"/>
+    <item android:title="انتخاب شهر" android:icon="@drawable/ic_location" />
+    <item android:title="تخفیفان روی نقشه" android:icon="@drawable/ic_map"/>
+    <item android:title="نشان شده ها" android:icon="@drawable/ic_neshan"/>
+    <item android:title=""/>
+    <item android:title="تنظیمات پیغام ها" android:icon="@drawable/ic_settings"/>
+    <item android:title="درباره ما" android:icon="@drawable/ic_info_black_24dp"/>
+    <item android:title="پشتیبانی" android:icon="@drawable/ic_call"/>
+    <item android:title="درخواست همکاری" android:icon="@drawable/ic_add"/>
+</menu>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbaramir"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:theme="@style/AppTheme"
+    app:popupTheme="@style/AppTheme"
+    android:background="#E34B4B">
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_search"></ImageView>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_shopping_cart_black_24dp"></ImageView>
+
+    <TextView
+        android:id="@+id/txttoolbar"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:fontFamily="@font/iran_medium"
+        android:textColor="@color/white"
+        android:text="تخفیفان"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_menu"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/nav_btn"
+        ></ImageView>
+
+
+
+
+</androidx.appcompat.widget.Toolbar>
