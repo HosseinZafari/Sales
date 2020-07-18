@@ -23,62 +23,75 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:id="@+id/group_main"
-        android:menuCategory="system">
-        <item
-            android:id="@+id/main"
-            android:checked="true"
-            android:contentDescription="صفحه اصلی"
-            android:icon="@drawable/login"
-            android:title="صفحه اصلی" />
+    <item
+        android:checkable="true"
+        android:id="@+id/main"
+        android:checked="true"
+        android:contentDescription="صفحه اصلی"
+        android:icon="@drawable/ic_main_page_24"
+        android:title="صفحه اصلی" />
 
-    </group>
+    <item android:title="اعتبار سنجی">
+        <menu>
+            <group
+                android:id="@+id/group_sign"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:id="@+id/qwe"
+                    android:icon="@drawable/login"
+                    android:title="ورود" />
+                <item
+                    android:icon="@drawable/signup"
+                    android:title="عضویت" />
 
-    <group
-        android:id="@+id/group_sign"
-        android:menuCategory="system">
-        <item
-            android:id="@+id/qwe"
-            android:icon="@drawable/login"
-            android:title="ورود" />
-        <item
-            android:icon="@drawable/signup"
-            android:title="عضویت" />
+            </group>
+        </menu>
+    </item>
 
-    </group>
+    <item android:title="قابلیت ها">
+        <menu>
 
-    <group
-        android:id="@+id/group_options"
-        android:menuCategory="system">
-        <item
-            android:icon="@drawable/ic_bookmark"
-            android:title="انتخاب دسته بندی" />
-        <item
-            android:icon="@drawable/ic_location"
-            android:title="انتخاب شهر" />
-        <item
-            android:icon="@drawable/ic_map"
-            android:title="تخفیفان روی نقشه" />
-        <item
-            android:icon="@drawable/ic_neshan"
-            android:title="نشان شده ها" />
-    </group>
+            <group
+                android:id="@+id/group_options"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:icon="@drawable/ic_bookmark"
+                    android:title="انتخاب دسته بندی" />
+                <item
+                    android:icon="@drawable/ic_location"
+                    android:title="انتخاب شهر" />
+                <item
+                    android:icon="@drawable/ic_map"
+                    android:title="تخفیفان روی نقشه" />
+                <item
+                    android:icon="@drawable/ic_neshan"
+                    android:title="نشان شده ها" />
+            </group>
+        </menu>
+    </item>
 
-    <group
-        android:id="@+id/group_setting"
-        android:menuCategory="system">
-        <item
-            android:icon="@drawable/ic_settings"
-            android:title="تنظیمات پیغام ها" />
-        <item
-            android:icon="@drawable/ic_info_black_24dp"
-            android:title="درباره ما" />
-        <item
-            android:icon="@drawable/ic_call"
-            android:title="پشتیبانی" />
-        <item
-            android:icon="@drawable/ic_add"
-            android:title="درخواست همکاری" />
-    </group>
+    <item android:title="دیگر">
+        <menu>
+
+            <group
+                android:id="@+id/group_setting"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:icon="@drawable/ic_settings"
+                    android:title="تنظیمات پیغام ها" />
+                <item
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="درباره ما" />
+                <item
+                    android:icon="@drawable/ic_call"
+                    android:title="پشتیبانی" />
+                <item
+                    android:icon="@drawable/ic_add"
+                    android:title="درخواست همکاری" />
+            </group>
+        </menu>
+    </item>
 </menu>

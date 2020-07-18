@@ -61,7 +61,7 @@
             <LinearLayout
                 android:id="@+id/search_main"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="37dp"
                 android:layout_marginLeft="@dimen/margin_high"
                 android:background="@drawable/shape_search"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -85,8 +85,10 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginRight="@dimen/margin_high"
                     android:gravity="center"
+                    android:textSize="12dp"
+                    app:fontFamily="@font/iran_ultra_light"
                     android:text="جستجو در تخفیفان"
-                    android:textColor="#333" />
+                    android:textColor="#555" />
             </LinearLayout>
 
             <!--            <androidx.appcompat.widget.AppCompatEditText-->
