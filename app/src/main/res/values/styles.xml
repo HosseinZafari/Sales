@@ -33,6 +33,9 @@
         <item name="android:textSize">@dimen/font_md</item>
     </style>
 
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
 
     <style name="Button_Normal_Light" parent="Widget.MaterialComponents.Button">
         <item name="textAllCaps">false</item>
@@ -66,10 +69,15 @@
         <item name="cornerRadius">4dp</item>
         <item name="rippleColor">@color/colorAccent</item>
         <item name="elevation">4dp</item>
-        <item name="android:paddingTop">@dimen/padding_low </item>
-        <item name="android:paddingBottom">@dimen/padding_low </item>
+        <item name="android:paddingTop">@dimen/padding_low</item>
+        <item name="android:paddingBottom">@dimen/padding_low</item>
         <item name="strokeWidth">1dp</item>
         <item name="fontFamily">@font/iran_medium</item>
+    </style>
+
+    <style name="NaviationItemText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/iran_ultra_light</item>
+        <item name="android:textSize">12dp</item>
     </style>
 
 </resources>
