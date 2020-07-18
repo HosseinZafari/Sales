@@ -37,7 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#fff"
-        android:gravity="right|center"
+        android:elevation="4dp"
+        android:gravity="right"
         android:layoutDirection="rtl"
         app:popupTheme="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
 
@@ -88,15 +89,32 @@
                     android:textColor="#333" />
             </LinearLayout>
 
+            <!--            <androidx.appcompat.widget.AppCompatEditText-->
+            <!--                android:id="@+id/edt_search_main"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_marginLeft="@dimen/margin_high"-->
+            <!--                android:background="@drawable/shape_search"-->
+            <!--                android:drawableRight="@drawable/ic_search2"-->
+            <!--                android:drawablePadding="@dimen/padding_std"-->
+            <!--                android:gravity="right|center_vertical"-->
+            <!--                android:text="جستجو در تخفیفان"-->
+            <!--                android:inputType="text|textAutoComplete|textAutoCorrect"-->
+            <!--                android:paddingStart="@dimen/padding_high"-->
+            <!--                android:paddingTop="@dimen/padding_low"-->
+            <!--                android:paddingEnd="@dimen/padding_std"-->
+            <!--                android:paddingBottom="@dimen/padding_low"-->
+            <!--                android:textColor="#333"-->
+            <!--                android:textColorHint="#444"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toRightOf="@+id/img_shopping"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.google.android.material.appbar.MaterialToolbar>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@drawable/elevation_toolbar" />
 
 </com.google.android.material.appbar.AppBarLayout>
