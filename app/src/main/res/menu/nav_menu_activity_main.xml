@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ MIT License
   ~
   ~ Copyright (c) 2020.  Hossein Zafari/novinfar
@@ -22,20 +21,64 @@
   ~ SOFTWARE.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group
+        android:id="@+id/group_main"
+        android:menuCategory="system">
+        <item
+            android:id="@+id/main"
+            android:checked="true"
+            android:contentDescription="صفحه اصلی"
+            android:icon="@drawable/login"
+            android:title="صفحه اصلی" />
 
-    <item android:title="ورود" android:id="@+id/qwe" android:icon="@drawable/login"/>
-    <item android:title="عضویت" android:icon="@drawable/signup" />
-    <item android:title="" />
-    <item android:title="انتخاب دسته بندی" android:icon="@drawable/ic_bookmark"/>
-    <item android:title="انتخاب شهر" android:icon="@drawable/ic_location" />
-    <item android:title="تخفیفان روی نقشه" android:icon="@drawable/ic_map"/>
-    <item android:title="نشان شده ها" android:icon="@drawable/ic_neshan"/>
-    <item android:title=""/>
-    <item android:title="تنظیمات پیغام ها" android:icon="@drawable/ic_settings"/>
-    <item android:title="درباره ما" android:icon="@drawable/ic_info_black_24dp"/>
-    <item android:title="پشتیبانی" android:icon="@drawable/ic_call"/>
-    <item android:title="درخواست همکاری" android:icon="@drawable/ic_add"/>
+    </group>
+
+    <group
+        android:id="@+id/group_sign"
+        android:menuCategory="system">
+        <item
+            android:id="@+id/qwe"
+            android:icon="@drawable/login"
+            android:title="ورود" />
+        <item
+            android:icon="@drawable/signup"
+            android:title="عضویت" />
+
+    </group>
+
+    <group
+        android:id="@+id/group_options"
+        android:menuCategory="system">
+        <item
+            android:icon="@drawable/ic_bookmark"
+            android:title="انتخاب دسته بندی" />
+        <item
+            android:icon="@drawable/ic_location"
+            android:title="انتخاب شهر" />
+        <item
+            android:icon="@drawable/ic_map"
+            android:title="تخفیفان روی نقشه" />
+        <item
+            android:icon="@drawable/ic_neshan"
+            android:title="نشان شده ها" />
+    </group>
+
+    <group
+        android:id="@+id/group_setting"
+        android:menuCategory="system">
+        <item
+            android:icon="@drawable/ic_settings"
+            android:title="تنظیمات پیغام ها" />
+        <item
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="درباره ما" />
+        <item
+            android:icon="@drawable/ic_call"
+            android:title="پشتیبانی" />
+        <item
+            android:icon="@drawable/ic_add"
+            android:title="درخواست همکاری" />
+    </group>
 </menu>

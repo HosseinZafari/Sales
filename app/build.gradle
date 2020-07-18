@@ -29,6 +29,12 @@ android {
     compileSdkVersion 29
     buildToolsVersion '29.0.2'
 
+    if(project.hasProperty('devBuild')){
+        splits.abi.enable = false
+        splits.density.enable = false
+        aaptOptions.cruncherEnabled = false
+    }
+
     defaultConfig {
         applicationId "hosseinzafari.github.sales"
         minSdkVersion 19
@@ -39,8 +45,13 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    dexOptions {
+        preDexLibraries true
+    }
+
     buildTypes {
         release {
+            crunchPngs false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -63,4 +74,6 @@ dependencies {
     // ViewPager2 for Support Rtl
     implementation "androidx.viewpager2:viewpager2:1.0.0"
 
+    // Circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
