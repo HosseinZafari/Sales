@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2020.  Hossein Zafari/novinfar
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="180dp"
-    android:background="#DD4C32">
+    android:background="@drawable/background_header">
 
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -17,7 +39,7 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="30dp"
         android:layout_marginRight="14dp"
-        android:src="@drawable/ic_person_nav" />
+        app:srcCompat="@drawable/ic_person_nav" />
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="wrap_content"
@@ -28,6 +50,7 @@
         android:layout_toLeftOf="@id/image_head_nav"
         android:fontFamily="@font/iran_medium"
         android:text="تخفیفان"
+        android:textColor="@color/white"
         android:textSize="@dimen/font_xlg" />
 
 
