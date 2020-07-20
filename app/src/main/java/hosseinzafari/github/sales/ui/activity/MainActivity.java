@@ -25,16 +25,20 @@ package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.TextViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 
 
 public class MainActivity extends GAppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +57,14 @@ public class MainActivity extends GAppCompatActivity implements NavigationView.O
         drawerLayout = findViewById(R.id.drawer_layout);
 
         setupNavigationView();
+        String name=GSharedPref.getSharedPreferences().getString("name","");
+        String job=GSharedPref.getSharedPreferences().getString("job","");
+        View view=navigationView.getHeaderView(0);
+        TextView TXT_NAME=view.findViewById(R.id.txt_name);
+        TextView TXT_JOB=view.findViewById(R.id.txt_job);
+        TXT_NAME.setText(name);
+        TXT_JOB.setText(job);
+
 
     }
 

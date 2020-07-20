@@ -45,11 +45,28 @@
         app:civ_border_width="2dp" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginTop="40dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/image_head_nav"
+        android:fontFamily="@font/iran_medium"
+        android:text="تخفیفان"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_xlg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_job"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_toLeftOf="@id/image_head_nav"
         android:fontFamily="@font/iran_medium"
         android:text="تخفیفان"
