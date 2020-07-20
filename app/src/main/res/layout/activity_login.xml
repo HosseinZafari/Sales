@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2020.  Hossein Zafari/novinfar
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.Activity_login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/back_login"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/back_img_login">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/signup">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_nameamie"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="252dp"
+        android:fontFamily="@font/iran_light"
+        android:hint="نام خود را وارد کنید"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textSize="@dimen/font_sm">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_pass"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="312dp"
+        android:fontFamily="@font/iran_light"
+        android:hint="رمز عبور خود را وارد کنید"
+        android:inputType="textPassword"
+
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textSize="@dimen/font_sm" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_pass_re"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="372dp"
+        android:fontFamily="@font/iran_light"
+        android:hint="رمز عبور خود را دوباره وارد کنید"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textSize="@dimen/font_sm" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/Button_outline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_nameamie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="211dp"
+        android:fontFamily="@font/iran_medium"
+        android:text="ورود به برنامه"
+        android:textSize="@dimen/font_xlg">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_shoghl"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_nameamie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="135dp"
+        android:layoutDirection="rtl"
+
+        android:textDirection="rtl" />
+
+
+</RelativeLayout>
