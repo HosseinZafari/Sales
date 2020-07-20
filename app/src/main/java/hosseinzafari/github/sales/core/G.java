@@ -56,12 +56,19 @@ public class G extends Application{
         packageName = getPackageName();
     }
 
-    public static LayoutInflater getLayoutInflater(){
+    public static Context getContext() {
+        if (appCompatActivity == null) {
+            return context;
+        }
+        return appCompatActivity;
+    }
+
+    public static LayoutInflater getLayoutInflater() {
         if (layoutInflater == null) {
             GLog.i("layoutInflater1 is Null");
             layoutInflater = LayoutInflater.from(appCompatActivity);
         }
-            GLog.i("layoutInflater2 is : " + (layoutInflater == null));
+        GLog.i("layoutInflater2 is : " + (layoutInflater == null));
 
         return layoutInflater;
     }
