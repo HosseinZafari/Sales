@@ -41,38 +41,35 @@ public class GSharedPref {
     private static SharedPreferences.Editor sharedEdit;
 
     static {
-
         sharedPreferences = G.context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         sharedEdit = sharedPreferences.edit();
-
     }
 
     public static void setIsSubmitApp(boolean isSubmitApp) {
-
         sharedEdit.putBoolean("submit", isSubmitApp);
     }
 
-    public static void setNAME(String NAME) {
-        sharedEdit.putString("name", NAME);
+    public static void setName(String name) {
+        sharedEdit.putString("name", name);
     }
 
-    public static void setPASSWORD(String PASSWORD) {
-        sharedEdit.putString("pass", PASSWORD);
-
+    public static void setPassword(String password) {
+        sharedEdit.putString("pass", password);
     }
 
-    public static void setJOB(String JOB) {
-        sharedEdit.putString("job", JOB);
-
+    public static void setJob(String job) {
+        sharedEdit.putString("job", job);
     }
 
     public static void apply() {
         sharedEdit.apply();
+    }
 
+    public static boolean isLogin() {
+        return sharedPreferences.getBoolean("submit", false);
     }
 
     public static SharedPreferences getSharedPreferences() {
-
         return sharedPreferences;
     }
 
