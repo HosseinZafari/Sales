@@ -25,28 +25,44 @@ package hosseinzafari.github.sales.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
+
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 import hosseinzafari.github.sales.util.GLog;
+import hosseinzafari.github.sales.util.UtilActivity;
 
 public class SplashActivity extends GAppCompatActivity {
 
     private static final long TIME_DELAY = 3000;
+    private boolean ISLOGIN;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         founder.fullScreen()
                 .setContentView(R.layout.activity_splash);
+       ISLOGIN= GSharedPref.getSharedPreferences().getBoolean("submit",false);
+        if (ISLOGIN == false) {
+            G.handler.postDelayed(
+                    () -> {
+                        GLog.i("Start Activitylogin");
+                        UtilActivity.goActivity(Activity_login.class);
+                        finish();
+                    }, TIME_DELAY);
+        } if (ISLOGIN==true){
 
-        G.handler.postDelayed(
-                () -> {
-                    GLog.i("Start SplashScreen");
-                     startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                }, TIME_DELAY);
+            G.handler.postDelayed(
+                    () -> {
+                        GLog.i("Start SplashScreen");
+                        UtilActivity.goActivity(MainActivity.class);
+                        finish();
+                    }, TIME_DELAY);
 
+        }
 
 
     }

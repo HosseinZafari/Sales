@@ -30,7 +30,6 @@
         android:contentDescription="صفحه اصلی"
         android:icon="@drawable/ic_main_page_24"
         android:title="صفحه اصلی" />
-
     <item android:title="اعتبار سنجی">
         <menu>
             <group
