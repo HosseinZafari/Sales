@@ -21,44 +21,44 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
-/**
- *@created in 04/06/2020 - 6:24 PM
- *@project Sales
- *@author Hossein Zafari
- *@email  hosseinzafari2000@gmail.com
- * this is a base Activity and we can config this before another Acitvityes
- * we do must extends this class .
- */
+package hosseinzafari.github.sales.util;
+/*
 
-import android.os.Bundle;
+@created in 20/07/2020 - 03:22 PM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
+
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
-import hosseinzafari.github.sales.util.GToast;
-import hosseinzafari.github.sales.util.UtilActivity;
+import hosseinzafari.github.sales.core.G;
 
-public class GAppCompatActivity extends AppCompatActivity {
+public class GToast {
 
-    protected UtilActivity founder;
-    ;
+    private static Toast toast;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // set current activity for access it and use easy another classes
-        G.appCompatActivity = this;
-        founder = new UtilActivity();
+    static {
+        toast = new Toast(G.getContext());
     }
 
-    protected void toast(@NonNull String text) {
-        GToast.show(text);
+    public static void show(@NonNull String text, int duration) {
+        toast.setText(text);
+        toast.setDuration(duration);
+        toast.show();
     }
 
-    protected void toastLong(@NonNull String text) {
-        GToast.show(text, false);
+    public static void show(@NonNull String text) {
+        show(text, Toast.LENGTH_SHORT);
+    }
+
+    public static void show(@NonNull String text, boolean isShort) {
+        if (isShort) {
+            show(text);
+        } else {
+            show(text, Toast.LENGTH_LONG);
+        }
     }
 }
