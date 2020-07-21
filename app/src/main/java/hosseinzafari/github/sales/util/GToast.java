@@ -38,11 +38,7 @@ import hosseinzafari.github.sales.core.G;
 
 public class GToast {
 
-    private static Toast toast;
-
-    static {
-        toast = new Toast(G.getContext());
-    }
+    private static Toast toast = Toast.makeText(G.getContext() , "" , Toast.LENGTH_SHORT);
 
     public static void show(@NonNull String text, int duration) {
         toast.setText(text);
