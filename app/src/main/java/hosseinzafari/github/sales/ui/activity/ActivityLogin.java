@@ -36,55 +36,10 @@ import hosseinzafari.github.sales.util.UtilActivity;
 
 public class ActivityLogin extends GAppCompatActivity {
 
-    private AppCompatEditText edt_name_login, edt_password_login;
-    private Button button_login;
-    private boolean isLogin = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        setupviews();
-    }
-
-    private void setupviews() {
-//        edt_name_login = findViewById(R.id.edt_login);
-//        edt_password_login = findViewById(R.id.edt_pass_login);
-//        button_login = findViewById(R.id.btn_login);
-//        button_login.setOnClickListener(this);
-    }
-
-
-  //  @Override
-    //public void onClick(View v) {
-//        String name = edt_name_login.getText().toString().trim();
-//        String pass = edt_password_login.getText().toString().trim();
-//        String name_shared = GSharedPref.getSharedPreferences().getString("name", null);
-//        String pass_shared = GSharedPref.getSharedPreferences().getString("pass", null);
-//
-//        if (name.isEmpty()) {
-//            toast("لطفا ایمیل  خود را وارد کنید.");
-//        } else if (pass.isEmpty()) {
-//            toast("لطفا رمز عبور خود را وارد کنید");
-//        } else {
-//            if (name.contentEquals(name_shared) && pass.contentEquals(pass_shared)) {
-//
-//                GSharedPref.setIsSubmitApp(true);
-//                GSharedPref.apply();
-//                UtilActivity.goActivity(MainActivity.class);
-//                finish();
-//
-//            }
-//        }
-//    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        isLogin = GSharedPref.isLogin();
-    }
-
-    public void set_signup_activity(View view) {
-        UtilActivity.goActivity(SignupActivity.class);
+        // TODO must add logic here
     }
 }
