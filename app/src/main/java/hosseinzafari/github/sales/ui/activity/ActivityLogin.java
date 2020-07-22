@@ -25,23 +25,19 @@ package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
-import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
 import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 import hosseinzafari.github.sales.util.UtilActivity;
 
-public class ActivityLogin extends GAppCompatActivity implements View.OnClickListener {
+public class ActivityLogin extends GAppCompatActivity {
 
-    private AppCompatEditText edt_name, edt_password, edtpassre;
-    private Spinner spinner;
-    private Button button;
+    private AppCompatEditText edt_name_login, edt_password_login;
+    private Button button_login;
     private boolean isLogin = false;
 
     @Override
@@ -49,55 +45,46 @@ public class ActivityLogin extends GAppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupviews();
-        setSpinnerdata();
     }
 
     private void setupviews() {
-        edt_name = findViewById(R.id.edt_nameamie);
-        edt_password = findViewById(R.id.edt_pass);
-        edtpassre = findViewById(R.id.edt_pass_re);
-        spinner = findViewById(R.id.spinner_shoghl);
-        button = findViewById(R.id.btn_login);
-        button.setOnClickListener(this);
+//        edt_name_login = findViewById(R.id.edt_login);
+//        edt_password_login = findViewById(R.id.edt_pass_login);
+//        button_login = findViewById(R.id.btn_login);
+//        button_login.setOnClickListener(this);
     }
 
-    private void setSpinnerdata() {
-        ArrayAdapter<String> spinerAdapter = new ArrayAdapter<>(
-                ActivityLogin.this,
-                android.R.layout.simple_spinner_dropdown_item,
-                GDataMemoryKt.getDataSpiner()
-        );
-        spinner.setAdapter(spinerAdapter);
-    }
 
-    @Override
-    public void onClick(View v) {
-        String name = edt_name.getText().toString().trim();
-        String pass = edt_password.getText().toString().trim();
-        String passre = edtpassre.getText().toString().trim();
-        String job = spinner.getSelectedItem().toString();
-        if (name.isEmpty()) {
-            toast("لطفا نام خود را وارد کنید.");
-        } else if (pass.isEmpty()) {
-            toast("لطفا رمز عبور خود را وارد کنید");
-        } else if (!pass.contentEquals(passre)) {
-            toast("لطفا روز عبور خود را یکی وارد کنید");
-        } else if (spinner.getSelectedItemId() == 0) {
-            toast("لطفا شغل خود را وارد کنید");
-        } else {
-            GSharedPref.setIsSubmitApp(true);
-            GSharedPref.setName(name);
-            GSharedPref.setPassword(pass);
-            GSharedPref.setJob(job);
-            GSharedPref.apply();
-            UtilActivity.goActivity(MainActivity.class);
-            finish();
-        }
-    }
+  //  @Override
+    //public void onClick(View v) {
+//        String name = edt_name_login.getText().toString().trim();
+//        String pass = edt_password_login.getText().toString().trim();
+//        String name_shared = GSharedPref.getSharedPreferences().getString("name", null);
+//        String pass_shared = GSharedPref.getSharedPreferences().getString("pass", null);
+//
+//        if (name.isEmpty()) {
+//            toast("لطفا ایمیل  خود را وارد کنید.");
+//        } else if (pass.isEmpty()) {
+//            toast("لطفا رمز عبور خود را وارد کنید");
+//        } else {
+//            if (name.contentEquals(name_shared) && pass.contentEquals(pass_shared)) {
+//
+//                GSharedPref.setIsSubmitApp(true);
+//                GSharedPref.apply();
+//                UtilActivity.goActivity(MainActivity.class);
+//                finish();
+//
+//            }
+//        }
+//    }
 
     @Override
     protected void onStart() {
         super.onStart();
         isLogin = GSharedPref.isLogin();
+    }
+
+    public void set_signup_activity(View view) {
+        UtilActivity.goActivity(SignupActivity.class);
     }
 }
