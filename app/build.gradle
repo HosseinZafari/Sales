@@ -80,4 +80,25 @@ dependencies {
 
     // Circular ImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // okhttp3 version 3.12 is soppurt in api less lolipop
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
+
+    // gson and converter for retrofit
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // RxJava And RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.6'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.1'
+
+    // RecyclerView And Cardview
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 }
