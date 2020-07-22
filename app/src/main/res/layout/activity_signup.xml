@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ActivityLogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/back_login" />
+
+    <LinearLayout
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/back_img_login">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="25dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/signup">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_name_signup"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="252dp"
+        android:fontFamily="@font/iran_light"
+        android:hint="شماره تلفن همراه خود را وارد کنید"
+        android:inputType="textEmailAddress"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textSize="@dimen/font_sm">
+
+
+    </androidx.appcompat.widget.AppCompatEditText>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_pass_signup"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="312dp"
+        android:fontFamily="@font/iran_light"
+        android:gravity="right"
+        android:hint="رمز عبور خود را وارد کنید"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textSize="@dimen/font_sm" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_pass_reenter"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="372dp"
+        android:fontFamily="@font/iran_light"
+        android:gravity="right"
+        android:hint="رمز عبور خود را دوباره وارد کنید"
+        android:inputType="textPassword"
+        android:layoutDirection="rtl"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        android:textDirection="rtl"
+        android:textSize="@dimen/font_sm" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signup"
+        style="@style/Button_fill"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/spinner_shoghl"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/iran_light"
+        android:layout_marginTop="@dimen/margin_highx4"
+        android:text="ثبت نام"
+        android:textSize="@dimen/font_lg">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinner_shoghl"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/edt_name_signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="135dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl" />
+
+
+</RelativeLayout>
