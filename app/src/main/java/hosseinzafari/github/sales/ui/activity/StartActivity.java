@@ -34,7 +34,7 @@ import hosseinzafari.github.sales.core.GAppCompatActivity;
 
 public class StartActivity extends GAppCompatActivity {
 
-    private ViewPager2 viewpager;
+    public static ViewPager2 viewpager;
     private SlideFragmentAdapter adapter;
 
     @Override
@@ -61,7 +61,7 @@ public class StartActivity extends GAppCompatActivity {
         }
     }
 
-    private int getCurrentPage(){
+    public static int getCurrentPage(){
         return viewpager.getCurrentItem();
     }
 

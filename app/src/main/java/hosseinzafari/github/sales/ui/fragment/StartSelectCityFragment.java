@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +37,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.adapter.RecyclerViewCityAdapter;
 import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
+import hosseinzafari.github.sales.ui.activity.ActivityLogin;
+import hosseinzafari.github.sales.util.UtilActivity;
 
 /*
 
@@ -49,6 +52,7 @@ public class StartSelectCityFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private RecyclerViewCityAdapter adapter;
+    Button button;
 
     @Nullable
     @Override
@@ -61,7 +65,13 @@ public class StartSelectCityFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         recyclerView = view.findViewById(R.id.rv_city);
-
         recyclerView.setAdapter(adapter);
+        button=view.findViewById(R.id.go_to_login_activity);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    UtilActivity.goActivity(ActivityLogin.class);
+                }
+            });
     }
 }

@@ -37,6 +37,7 @@ import hosseinzafari.github.sales.util.UtilActivity;
 public class SplashActivity extends GAppCompatActivity {
 
     private static final long TIME_DELAY = 3000;
+    private static final long TIME_DELAY2 = 0;
     private boolean isLogin;
 
     @Override
@@ -45,15 +46,22 @@ public class SplashActivity extends GAppCompatActivity {
         founder.fullScreen()
                 .setContentView(R.layout.activity_splash);
 
-        G.handler.postDelayed(() -> {
-            if (GSharedPref.isLogin()) {
+        if (GSharedPref.isLogin()) {
+            G.handler.postDelayed(() -> {
                 GLog.i("Start SplashScreen");
                 UtilActivity.goActivity(MainActivity.class);
-            } else {
+                finish();
+            }, TIME_DELAY);
+
+        } else {
+
+            G.handler.postDelayed(() -> {
                 GLog.i("Start Activitylogin");
-                UtilActivity.goActivity(ActivityLogin.class);
-            }
-            finish();
-        }, TIME_DELAY);
+                UtilActivity.goActivity(StartActivity.class);
+                finish();
+            }, TIME_DELAY2);
+
+        }
+
     }
 }

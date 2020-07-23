@@ -80,6 +80,7 @@
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:id="@+id/go_to_login_activity"
             android:layout_gravity="bottom"
             android:layout_marginTop="@dimen/margin_highx3"
             android:text="ادامه"

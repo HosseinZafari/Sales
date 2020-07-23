@@ -26,6 +26,7 @@ package hosseinzafari.github.sales.ui.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
@@ -35,11 +36,18 @@ import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 import hosseinzafari.github.sales.util.UtilActivity;
 
 public class ActivityLogin extends GAppCompatActivity {
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        textView=findViewById(R.id.signup_txt);
         // TODO must add logic here
+    }
+
+    public void set_signup_activity(View view) {
+        UtilActivity.goActivity(SignupActivity.class);
+        finish();
     }
 }
