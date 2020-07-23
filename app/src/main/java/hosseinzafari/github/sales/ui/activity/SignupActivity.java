@@ -56,7 +56,7 @@ public class SignupActivity extends GAppCompatActivity implements View.OnClickLi
         edt_name_signup = findViewById(R.id.edt_name_signup);
         edt_password_signup = findViewById(R.id.edt_pass_signup);
         edt_pass_reenter = findViewById(R.id.edt_pass_reenter);
-        spinner = findViewById(R.id.spinner_shoghl);
+        spinner = findViewById(R.id.spinner_jobs);
         button_signup = findViewById(R.id.btn_signup);
         button_signup.setOnClickListener(this);
     }
