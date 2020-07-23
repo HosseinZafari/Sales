@@ -42,7 +42,7 @@ public class G extends Application{
 
     public static Handler handler;
     public static Context context;
-    public static GAppCompatActivity appCompatActivity;
+    public static GAppCompatActivity currentActivity;
     public static String packageName ;
     public static String TAG = "Test";
     private static LayoutInflater layoutInflater;
@@ -57,16 +57,16 @@ public class G extends Application{
     }
 
     public static Context getContext() {
-        if (appCompatActivity == null) {
+        if (currentActivity == null) {
             return context;
         }
-        return appCompatActivity;
+        return currentActivity;
     }
 
     public static LayoutInflater getLayoutInflater() {
         if (layoutInflater == null) {
             GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(appCompatActivity);
+            layoutInflater = LayoutInflater.from(currentActivity);
         }
         GLog.i("layoutInflater2 is : " + (layoutInflater == null));
 

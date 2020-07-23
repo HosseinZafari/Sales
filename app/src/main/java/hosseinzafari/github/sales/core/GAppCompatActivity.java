@@ -43,14 +43,15 @@ import hosseinzafari.github.sales.util.UtilActivity;
 public class GAppCompatActivity extends AppCompatActivity {
 
     protected UtilActivity founder;
-    ;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         // set current activity for access it and use easy another classes
-        G.appCompatActivity = this;
+        G.currentActivity = this;
+
         founder = new UtilActivity();
     }
 
