@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ MIT License
   ~
@@ -21,8 +22,8 @@
   ~ SOFTWARE.
   -->
 
-<resources>
-    <string name="app_name">Sales</string>
-    <string name="OPEN">OPEN</string>
-    <string name="CLOSE">CLOSE</string>
-</resources>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke android:color="@color/colorGray2" android:width="1dp" />
+    <corners android:radius="5dp" />
+</shape>

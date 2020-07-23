@@ -21,55 +21,30 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
+package hosseinzafari.github.sales.data.remote;
 /*
 
-@created in 04/06/2020 - 1:14 PM
+@created in 22/07/2020 - 06:26 AM
 @project Sales
 @author Hossein Zafari 
 @email  hosseinzafari2000@gmail.com 
 */
 
-import android.app.Application;
-import android.content.Context;
-import android.os.Handler;
-import android.view.LayoutInflater;
+import hosseinzafari.github.sales.struct.ResponseStdModel;
+import io.reactivex.Single;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.POST;
 
-import hosseinzafari.github.sales.util.GLog;
+public interface Api {
 
+    @POST("signup")
+    @FormUrlEncoded
+    Single<ResponseStdModel> signup(
+            @Field("name") String name ,
+            @Field("family") String family ,
+            @Field("phoneNumber") String phoneNumber ,
+            @Field("password") String password
+    );
 
-public class G extends Application{
-
-    public static Handler handler;
-    public static Context context;
-    public static GAppCompatActivity currentActivity;
-    public static String packageName ;
-    public static String TAG = "Test";
-    private static LayoutInflater layoutInflater;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        context = getApplicationContext();
-        handler = new Handler();
-        packageName = getPackageName();
-    }
-
-    public static Context getContext() {
-        if (currentActivity == null) {
-            return context;
-        }
-        return currentActivity;
-    }
-
-    public static LayoutInflater getLayoutInflater() {
-        if (layoutInflater == null) {
-            GLog.i("layoutInflater1 is Null");
-            layoutInflater = LayoutInflater.from(currentActivity);
-        }
-        GLog.i("layoutInflater2 is : " + (layoutInflater == null));
-
-        return layoutInflater;
-    }
 }

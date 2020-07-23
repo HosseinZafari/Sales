@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2020.  Hossein Zafari/novinfar
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:checkable="true"
+        android:id="@+id/main"
+        android:checked="true"
+        android:contentDescription="صفحه اصلی"
+        android:icon="@drawable/ic_main_page_24"
+        android:title="صفحه اصلی" />
+    <item android:title="اعتبار سنجی">
+        <menu>
+            <group
+                android:id="@+id/group_sign"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:id="@+id/qwe"
+                    android:icon="@drawable/login"
+                    android:title="ورود" />
+                <item
+                    android:icon="@drawable/signup"
+                    android:title="عضویت" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="قابلیت ها">
+        <menu>
+
+            <group
+                android:id="@+id/group_options"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:icon="@drawable/ic_bookmark"
+                    android:title="انتخاب دسته بندی" />
+                <item
+                    android:icon="@drawable/ic_location"
+                    android:title="انتخاب شهر" />
+                <item
+                    android:icon="@drawable/ic_map"
+                    android:title="تخفیفان روی نقشه" />
+                <item
+                    android:icon="@drawable/ic_neshan"
+                    android:title="نشان شده ها" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="دیگر">
+        <menu>
+
+            <group
+                android:id="@+id/group_setting"
+                android:checkableBehavior="single"
+                android:menuCategory="system">
+                <item
+                    android:icon="@drawable/ic_settings"
+                    android:title="تنظیمات پیغام ها" />
+                <item
+                    android:icon="@drawable/ic_info_black_24dp"
+                    android:title="درباره ما" />
+                <item
+                    android:icon="@drawable/ic_call"
+                    android:title="پشتیبانی" />
+                <item
+                    android:icon="@drawable/ic_add"
+                    android:title="درخواست همکاری" />
+            </group>
+        </menu>
+    </item>
+</menu>

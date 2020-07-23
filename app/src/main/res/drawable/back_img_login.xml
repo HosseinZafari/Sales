@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ MIT License
   ~
   ~ Copyright (c) 2020.  Hossein Zafari/novinfar
@@ -21,8 +21,8 @@
   ~ SOFTWARE.
   -->
 
-<resources>
-    <string name="app_name">Sales</string>
-    <string name="OPEN">OPEN</string>
-    <string name="CLOSE">CLOSE</string>
-</resources>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <stroke android:width="5dp" android:color="@color/white" />
+    <solid android:color="@color/colorPrimary"></solid>
+</shape>

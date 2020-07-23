@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ MIT License
   ~
   ~ Copyright (c) 2020.  Hossein Zafari/novinfar
@@ -21,8 +21,13 @@
   ~ SOFTWARE.
   -->
 
-<resources>
-    <string name="app_name">Sales</string>
-    <string name="OPEN">OPEN</string>
-    <string name="CLOSE">CLOSE</string>
-</resources>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textSize="@dimen/font_md"
+    android:gravity="right"
+    android:textDirection="rtl"
+    android:textColor="@color/colorGray4"
+    tools:text="سلام"
+    android:padding="5dip" />

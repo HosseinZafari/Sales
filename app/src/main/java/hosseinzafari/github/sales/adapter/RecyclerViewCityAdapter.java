@@ -47,7 +47,9 @@ import hosseinzafari.github.sales.util.ExtensionsKt;
 public class RecyclerViewCityAdapter extends RecyclerView.Adapter<RecyclerViewCityAdapter.CityViewHolder> {
 
     private List<CityModel> data;
-    private int lastSelectedCity = -1;
+    private int lastSelectedCity = NO_SELECTED;
+
+    public static final int NO_SELECTED = -1;
 
     public RecyclerViewCityAdapter(List<CityModel> data) {
         this.data = data;
@@ -70,6 +72,9 @@ public class RecyclerViewCityAdapter extends RecyclerView.Adapter<RecyclerViewCi
         return data.size();
     }
 
+    public int getLastSelectedCity(){
+        return lastSelectedCity;
+    }
 
     class CityViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView txt_name_city;

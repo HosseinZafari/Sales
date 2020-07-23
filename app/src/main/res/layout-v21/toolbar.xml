@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2020.  Hossein Zafari/novinfar
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:layoutDirection="rtl">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_main"
+        style="@style/Widget.MaterialComponents.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#fff"
+        android:elevation="4dp"
+        android:gravity="right"
+        android:layoutDirection="rtl"
+        app:popupTheme="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_shopping"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/margin_std"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_outline_shopping_cart_24" />
+
+            <LinearLayout
+                android:id="@+id/search_main"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="@dimen/margin_high"
+                android:background="@drawable/shape_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/img_shopping"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:adjustViewBounds="true"
+                    android:paddingRight="@dimen/padding_high"
+                    android:scaleType="fitCenter"
+                    android:tint="#333"
+                    app:srcCompat="@drawable/ic_search2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/margin_high"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    app:fontFamily="@font/iran_ultra_light"
+                    android:text="جستجو در تخفیفان"
+                    android:textColor="#555" />
+            </LinearLayout>
+
+            <!--            <androidx.appcompat.widget.AppCompatEditText-->
+            <!--                android:id="@+id/edt_search_main"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_marginLeft="@dimen/margin_high"-->
+            <!--                android:background="@drawable/shape_search"-->
+            <!--                android:drawableRight="@drawable/ic_search2"-->
+            <!--                android:drawablePadding="@dimen/padding_std"-->
+            <!--                android:gravity="right|center_vertical"-->
+            <!--                android:text="جستجو در تخفیفان"-->
+            <!--                android:inputType="text|textAutoComplete|textAutoCorrect"-->
+            <!--                android:paddingStart="@dimen/padding_high"-->
+            <!--                android:paddingTop="@dimen/padding_low"-->
+            <!--                android:paddingEnd="@dimen/padding_std"-->
+            <!--                android:paddingBottom="@dimen/padding_low"-->
+            <!--                android:textColor="#333"-->
+            <!--                android:textColorHint="#444"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintLeft_toRightOf="@+id/img_shopping"-->
+            <!--                app:layout_constraintRight_toRightOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+</com.google.android.material.appbar.AppBarLayout>

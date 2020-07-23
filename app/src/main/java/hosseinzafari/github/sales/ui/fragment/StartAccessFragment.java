@@ -27,12 +27,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import hosseinzafari.github.sales.R;
+import hosseinzafari.github.sales.ui.activity.StartActivity;
+import hosseinzafari.github.sales.util.GLog;
 
 /*
 
@@ -48,5 +51,16 @@ public class StartAccessFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_start_access , container , false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        // TODO Handle for Start Access Location
+        Button btn_enter_location = view.findViewById(R.id.btn_enter_location);
+        btn_enter_location.setOnClickListener(v -> GLog.i("Start Access For Location"));
+
+        // Handle do navigate to next page for viewpager
+        Button btn_not_now = view.findViewById(R.id.btn_not_now_enter_location);
+        btn_not_now.setOnClickListener(v -> StartActivity.viewpager.setCurrentItem(StartActivity.getCurrentPage() + 1));
     }
 }

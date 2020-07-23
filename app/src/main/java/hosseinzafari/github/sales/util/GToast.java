@@ -21,48 +21,40 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.ui.activity;
+package hosseinzafari.github.sales.util;
+/*
 
-import android.os.Bundle;
-import android.view.View;
+@created in 20/07/2020 - 03:22 PM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
-import androidx.viewpager2.widget.ViewPager2;
+import android.widget.Toast;
 
-import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.adapter.SlideFragmentAdapter;
-import hosseinzafari.github.sales.core.GAppCompatActivity;
+import androidx.annotation.NonNull;
 
-public class StartActivity extends GAppCompatActivity {
+import hosseinzafari.github.sales.core.G;
 
-    public static ViewPager2 viewpager;
-    private SlideFragmentAdapter adapter;
+public class GToast {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+    private static Toast toast = Toast.makeText(G.getContext() , "" , Toast.LENGTH_SHORT);
 
-        adapter = new SlideFragmentAdapter(this);
-        viewpager = findViewById(R.id.viewPager_Start);
-        prepareViewPager();
+    public static void show(@NonNull String text, int duration) {
+        toast.setText(text);
+        toast.setDuration(duration);
+        toast.show();
     }
 
-    private void prepareViewPager(){
-        viewpager.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-        viewpager.setAdapter(adapter);
+    public static void show(@NonNull String text) {
+        show(text, Toast.LENGTH_SHORT);
     }
 
-    @Override
-    public void onBackPressed() {
-        if (getCurrentPage() == 0){
-            super.onBackPressed();
+    public static void show(@NonNull String text, boolean isShort) {
+        if (isShort) {
+            show(text);
         } else {
-            viewpager.setCurrentItem(getCurrentPage() - 1);
+            show(text, Toast.LENGTH_LONG);
         }
     }
-
-    public static int getCurrentPage(){
-        return viewpager.getCurrentItem();
-    }
-
 }

@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,7 +36,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.adapter.RecyclerViewCityAdapter;
+import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
+import hosseinzafari.github.sales.ui.activity.ActivityLogin;
+import hosseinzafari.github.sales.util.GToast;
+import hosseinzafari.github.sales.util.UtilActivity;
 
 /*
 
@@ -55,13 +60,30 @@ public class StartSelectCityFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         adapter = new RecyclerViewCityAdapter(GDataMemoryKt.getCityData());
 
-        return inflater.inflate(R.layout.fragment_start_select_city , container , false);
+        return inflater.inflate(R.layout.fragment_start_select_city, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         recyclerView = view.findViewById(R.id.rv_city);
-
         recyclerView.setAdapter(adapter);
+
+        // submit viewpager and go ActivityMain
+        Button btn_submit = view.findViewById(R.id.btn_submit_viewpager);
+        btn_submit.setOnClickListener(v -> {
+            // Control if is no Selected
+            if(checkNoSelectedItemCity()){
+                GToast.show("لطفا شهر خود را انتخاب کنید.", false);
+                return;
+            }
+
+            // TODO must change to ActivityMain
+            UtilActivity.goActivity(ActivityLogin.class);
+            G.currentActivity.finish();
+        });
+    }
+
+    private boolean checkNoSelectedItemCity(){
+        return adapter.getLastSelectedCity() == RecyclerViewCityAdapter.NO_SELECTED;
     }
 }

@@ -56,12 +56,17 @@ fun getCityData() = listOf(
       CityModel(21,  "کرمان" ),
       CityModel(22,  "کرمانشاه" ),
       CityModel(23,  " کهگیلویه و بویراحمد")   ,
-      CityModel(24,  "گلستان" ),
-      CityModel(25,  "گیلان" ),
-      CityModel(26,  "لرستان" ),
-      CityModel(27,  "مازندران" ),
-      CityModel(28,  "مرکزی" ),
-      CityModel(29,  "هرمزگان" ),
-      CityModel(30,  "همدان" ),
-      CityModel(31,  "یزد")
+      CityModel(24, "گلستان"),
+      CityModel(25, "گیلان"),
+      CityModel(26, "لرستان"),
+      CityModel(27, "مازندران"),
+      CityModel(28, "مرکزی"),
+      CityModel(29, "هرمزگان"),
+      CityModel(30, "همدان"),
+      CityModel(31, "یزد")
+)
+
+fun getDataSpiner() = arrayOf(
+      "شغل خود را انتخاب کنید", "دانشجو", "کارمند",
+      "مدیر", "آزاد", "فریلنسر", "دانش آموز"
 )

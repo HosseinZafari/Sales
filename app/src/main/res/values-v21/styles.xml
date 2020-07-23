@@ -1,4 +1,4 @@
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ MIT License
   ~
   ~ Copyright (c) 2020.  Hossein Zafari/novinfar
@@ -22,7 +22,17 @@
   -->
 
 <resources>
-    <string name="app_name">Sales</string>
-    <string name="OPEN">OPEN</string>
-    <string name="CLOSE">CLOSE</string>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/iran</item>
+        <item name="android:textSize">@dimen/font_md</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">#4f44</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
 </resources>

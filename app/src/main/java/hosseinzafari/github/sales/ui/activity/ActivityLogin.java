@@ -25,44 +25,24 @@ package hosseinzafari.github.sales.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-
-import androidx.viewpager2.widget.ViewPager2;
+import android.widget.TextView;
 
 import hosseinzafari.github.sales.R;
-import hosseinzafari.github.sales.adapter.SlideFragmentAdapter;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
+import hosseinzafari.github.sales.util.UtilActivity;
 
-public class StartActivity extends GAppCompatActivity {
-
-    public static ViewPager2 viewpager;
-    private SlideFragmentAdapter adapter;
+public class ActivityLogin extends GAppCompatActivity {
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
-
-        adapter = new SlideFragmentAdapter(this);
-        viewpager = findViewById(R.id.viewPager_Start);
-        prepareViewPager();
+        setContentView(R.layout.activity_login);
+        textView = findViewById(R.id.txt_signup);
+        // TODO must add logic here
     }
 
-    private void prepareViewPager(){
-        viewpager.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
-        viewpager.setAdapter(adapter);
+    public void set_signup_activity(View view) {
+        UtilActivity.goActivity(SignupActivity.class);
     }
-
-    @Override
-    public void onBackPressed() {
-        if (getCurrentPage() == 0){
-            super.onBackPressed();
-        } else {
-            viewpager.setCurrentItem(getCurrentPage() - 1);
-        }
-    }
-
-    public static int getCurrentPage(){
-        return viewpager.getCurrentItem();
-    }
-
 }

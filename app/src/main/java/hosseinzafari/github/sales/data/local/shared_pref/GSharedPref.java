@@ -25,8 +25,8 @@ package hosseinzafari.github.sales.data.local.shared_pref;
 /*
 @created in 10/06/2020 - 10:56 AM
 @project Sales
-@author Hossein Zafari 
-@email  hosseinzafari2000@gmail.com 
+@author Hossein Zafari
+@email  hosseinzafari2000@gmail.com
 */
 
 import android.content.Context;
@@ -39,15 +39,37 @@ public class GSharedPref {
     private static final String SHARED_PREF_NAME = G.packageName + "_SharedPref_";
     private static SharedPreferences sharedPreferences;
     private static SharedPreferences.Editor sharedEdit;
-    private static boolean isSubmitApp;
 
     static {
-        sharedPreferences = G.context.getSharedPreferences(SHARED_PREF_NAME , Context.MODE_PRIVATE);
+        sharedPreferences = G.context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         sharedEdit = sharedPreferences.edit();
-        isSubmitApp = sharedPreferences.getBoolean("submit" , false);
     }
 
-    public static SharedPreferences getSharedPreferences(){
+    public static void setIsSubmitApp(boolean isSubmitApp) {
+        sharedEdit.putBoolean("submit", isSubmitApp);
+    }
+
+    public static void setName(String name) {
+        sharedEdit.putString("name", name);
+    }
+
+    public static void setPassword(String password) {
+        sharedEdit.putString("pass", password);
+    }
+
+    public static void setJob(String job) {
+        sharedEdit.putString("job", job);
+    }
+
+    public static void apply() {
+        sharedEdit.apply();
+    }
+
+    public static boolean isLogin() {
+        return sharedPreferences.getBoolean("submit", false);
+    }
+
+    public static SharedPreferences getSharedPreferences() {
         return sharedPreferences;
     }
 
@@ -55,9 +77,6 @@ public class GSharedPref {
         return sharedEdit;
     }
 
-    public static boolean isSubmit(){
-        return isSubmitApp;
-    }
 }
 
 

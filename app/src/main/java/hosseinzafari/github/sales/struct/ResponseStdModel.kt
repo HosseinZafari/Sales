@@ -21,45 +21,13 @@
  * SOFTWARE.
  */
 
-package hosseinzafari.github.sales.core;
-/**
- *@created in 04/06/2020 - 6:24 PM
- *@project Sales
- *@author Hossein Zafari
- *@email  hosseinzafari2000@gmail.com
- * this is a base Activity and we can config this before another Acitvityes
- * we do must extends this class .
- */
-
-import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import hosseinzafari.github.sales.util.GToast;
-import hosseinzafari.github.sales.util.UtilActivity;
-
-public class GAppCompatActivity extends AppCompatActivity {
-
-    protected UtilActivity founder;
+package hosseinzafari.github.sales.struct
 
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+import com.google.gson.annotations.SerializedName
 
-        // set current activity for access it and use easy another classes
-        G.currentActivity = this;
-
-        founder = new UtilActivity();
-    }
-
-    protected void toast(@NonNull String text) {
-        GToast.show(text);
-    }
-
-    protected void toastLong(@NonNull String text) {
-        GToast.show(text, false);
-    }
-}
+data class ResponseStdModel(
+    val code: Int, // 200
+    val desc: String, // you successfully singup
+    val msg: String // success
+)
