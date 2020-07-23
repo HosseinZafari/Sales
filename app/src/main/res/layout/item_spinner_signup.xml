@@ -21,8 +21,13 @@
   ~ SOFTWARE.
   -->
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <stroke android:width="5dp" android:color="@color/white" />
-    <solid android:color="@color/colorPrimary"></solid>
-</shape>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:textSize="@dimen/font_md"
+    android:gravity="right"
+    android:textDirection="rtl"
+    android:textColor="@color/colorGray4"
+    tools:text="سلام"
+    android:padding="5dip" />

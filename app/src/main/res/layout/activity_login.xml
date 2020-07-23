@@ -22,15 +22,33 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.ActivityLogin">
 
     <LinearLayout
+        android:id="@+id/background_header"
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@drawable/back_login" />
+        android:background="@color/colorPrimary"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        android:id="@+id/prg_signup_Activity"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/background_header"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:indeterminate="true"
+        android:layoutDirection="rtl"
+        android:mirrorForRtl="true"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="110dp"
@@ -44,7 +62,7 @@
             android:layout_height="match_parent"
             android:padding="25dp"
             android:scaleType="fitXY"
-            android:src="@drawable/login">
+            app:srcCompat="@drawable/ic_person_nav">
 
         </androidx.appcompat.widget.AppCompatImageView>
 
@@ -60,15 +78,15 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="275dp"
         android:fontFamily="@font/iran_light"
+        android:gravity="right"
         android:hint="شماره تلفن همراه خود را وارد کنید"
         android:maxLength="15"
         android:maxLines="1"
-        android:textColorHint="@android:color/black"
+        android:textColorHint="@color/colorGrayDark"
         android:textSize="@dimen/font_sm">
 
 
     </androidx.appcompat.widget.AppCompatEditText>
-
 
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -82,37 +100,35 @@
         android:gravity="right"
         android:hint="رمز عبور خود را وارد کنید"
         android:inputType="textPassword"
-        android:maxLength="15"
+        android:maxLength="20"
         android:maxLines="1"
-        android:textColorHint="@android:color/black"
+        android:textColorHint="@color/colorGrayDark"
         android:textSize="@dimen/font_sm" />
 
     <TextView
-        android:id="@+id/signup_txt"
+        android:id="@+id/txt_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/edt_pass_login"
-        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="162dp"
-        android:fontFamily="@font/iran_light"
+        android:layout_marginTop="@dimen/margin_highx2"
+        android:fontFamily="@font/iran_ultra_light"
         android:onClick="set_signup_activity"
         android:text=" ثبت‌نام کنید!"
-        android:textColor="@color/black"
+        android:textColor="@color/colorGray4"
         android:textSize="@dimen/font_md" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         style="@style/Button_outline"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/signup_txt"
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/txt_signup"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/iran_light"
+        android:fontFamily="@font/iran_ultra_light"
         android:text="ورود به برنامه"
-        android:textSize="@dimen/font_lg">
+        android:textSize="@dimen/font_md">
 
     </com.google.android.material.button.MaterialButton>
 

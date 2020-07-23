@@ -64,7 +64,7 @@ public class SignupActivity extends GAppCompatActivity implements View.OnClickLi
     private void setSpinnerdata() {
         ArrayAdapter<String> spinerAdapter = new ArrayAdapter<>(
                 SignupActivity.this,
-                android.R.layout.simple_spinner_dropdown_item,
+                R.layout.item_spinner_signup,
                 GDataMemoryKt.getDataSpiner()
         );
         spinner.setAdapter(spinerAdapter);

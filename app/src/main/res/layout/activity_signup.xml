@@ -1,13 +1,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.ActivityLogin">
 
     <LinearLayout
+        android:id="@+id/background_header"
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@drawable/back_login" />
+        android:background="@color/colorPrimary"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        android:id="@+id/prg_signup_Activity"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/background_header"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:indeterminate="true"
+        android:layoutDirection="rtl"
+        android:mirrorForRtl="true"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="110dp"
@@ -19,9 +37,9 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="25dp"
+            android:padding="24dp"
             android:scaleType="fitXY"
-            android:src="@drawable/signup">
+            app:srcCompat="@drawable/ic_person_add">
 
         </androidx.appcompat.widget.AppCompatImageView>
 
@@ -37,11 +55,14 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="252dp"
         android:fontFamily="@font/iran_light"
+        android:gravity="right"
         android:hint="شماره تلفن همراه خود را وارد کنید"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
         android:maxLength="15"
         android:maxLines="1"
-        android:textColorHint="@android:color/black"
+        android:textColor="@color/colorGrayDark"
+        android:textColorHint="@color/colorGray4"
+        android:textDirection="rtl"
         android:textSize="@dimen/font_sm">
 
 
@@ -58,9 +79,10 @@
         android:gravity="right"
         android:hint="رمز عبور خود را وارد کنید"
         android:inputType="textPassword"
-        android:maxLength="15"
+        android:maxLength="20"
         android:maxLines="1"
-        android:textColorHint="@android:color/black"
+        android:textColor="@color/colorGrayDark"
+        android:textColorHint="@color/colorGray4"
         android:textSize="@dimen/font_sm" />
 
 
@@ -76,36 +98,37 @@
         android:hint="رمز عبور خود را دوباره وارد کنید"
         android:inputType="textPassword"
         android:layoutDirection="rtl"
-        android:maxLength="15"
+        android:maxLength="20"
         android:maxLines="1"
-        android:textColorHint="@android:color/black"
+        android:textColor="@color/colorGrayDark"
+        android:textColorHint="@color/colorGray4"
         android:textDirection="rtl"
         android:textSize="@dimen/font_sm" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signup"
-        style="@style/Button_fill"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:layout_below="@id/spinner_shoghl"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/iran_light"
-        android:layout_marginTop="@dimen/margin_highx4"
-        android:text="ثبت نام"
-        android:textSize="@dimen/font_lg">
-
-    </com.google.android.material.button.MaterialButton>
 
     <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spinner_shoghl"
-        android:layout_width="310dp"
+        android:id="@+id/spinner_jobs"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_below="@id/edt_name_signup"
+        android:layout_below="@id/edt_pass_reenter"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="135dp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/margin_highx4"
         android:layoutDirection="rtl"
         android:textDirection="rtl" />
 
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signup"
+        style="@style/Button_fill"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/spinner_jobs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_highx4"
+        android:fontFamily="@font/iran_light"
+        android:text="ثبت نام"
+        android:textSize="@dimen/font_sm">
+
+    </com.google.android.material.button.MaterialButton>
 </RelativeLayout>
