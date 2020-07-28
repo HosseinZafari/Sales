@@ -1,0 +1,39 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout22"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
+    tools:context=".ui.activity.MainActivity"
+    tools:openDrawer="right">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar"></include>
+
+
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_mn"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="rtl"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Light"
+        app:headerLayout="@layout/header_of_nav_main_activity"
+        app:itemIconPadding="@dimen/padding_std"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@color/colorGray4"
+        app:itemTextAppearance="@style/NaviationItemText"
+        app:itemTextColor="@color/colorGray4"
+        app:menu="@menu/nav_menu_activity_main" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
