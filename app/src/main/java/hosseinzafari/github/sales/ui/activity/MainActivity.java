@@ -23,21 +23,16 @@
 
 package hosseinzafari.github.sales.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.widget.TextViewCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -50,7 +45,6 @@ import hosseinzafari.github.sales.core.GAppCompatActivity;
 import hosseinzafari.github.sales.data.local.shared_pref.GSharedPref;
 import hosseinzafari.github.sales.struct.DataProvider;
 import hosseinzafari.github.sales.struct.Person;
-import hosseinzafari.github.sales.util.GToast;
 
 
 public class MainActivity extends GAppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -58,10 +52,9 @@ public class MainActivity extends GAppCompatActivity implements NavigationView.O
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-    RecyclerView recyclerView;
-    List<Person> people;
-    RecyclerMainAdapter mainAdapter;
-    RecyclerView.LayoutManager manager;
+    private RecyclerView recyclerView;
+    private List<Person> people;
+    private RecyclerMainAdapter mainAdapter;
 
 
     @Override
@@ -72,7 +65,7 @@ public class MainActivity extends GAppCompatActivity implements NavigationView.O
         setupviews();
         setupNavigationView();
         setupnavigationdata();
-        SetRecyclerData();
+        setRecyclerData();
 
     }
 
@@ -85,15 +78,15 @@ public class MainActivity extends GAppCompatActivity implements NavigationView.O
     }
 
 
-    private void setupNavigationView(){
+    private void setupNavigationView() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this ,
-                drawerLayout ,
-                toolbar ,
-                R.string.OPEN ,
+                this,
+                drawerLayout,
+                toolbar,
+                R.string.OPEN,
                 R.string.CLOSE
         );
 
@@ -105,32 +98,32 @@ public class MainActivity extends GAppCompatActivity implements NavigationView.O
 
         // TODO navigationView.getBackground().setAlpha(122);
     }
-    private  void SetRecyclerData(){
 
-
-
-        mainAdapter=new RecyclerMainAdapter(this,people);
+    private void setRecyclerData() {
+        mainAdapter = new RecyclerMainAdapter(this, people);
         recyclerView.setAdapter(mainAdapter);
-        manager=new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(manager);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false));
     }
-    private void setupviews(){
+
+    private void setupviews() {
         toolbar = findViewById(R.id.toolbar_main);
         navigationView = findViewById(R.id.nav_mn);
         drawerLayout = findViewById(R.id.drawer_layout22);
         recyclerView = findViewById(R.id.rec_main_item);
-        people= DataProvider.getdata();
+        people = DataProvider.getdata();
 
     }
-    private void setupnavigationdata(){
 
-        String name=GSharedPref.getSharedPreferences().getString("name","");
-        String job=GSharedPref.getSharedPreferences().getString("job","");
-        View view=navigationView.getHeaderView(0);
-        TextView TXT_NAME=view.findViewById(R.id.txt_name);
-        TextView TXT_JOB=view.findViewById(R.id.txt_job);
-        TXT_NAME.setText(name);
-        TXT_JOB.setText(job);
+    private void setupnavigationdata() {
+        String name = GSharedPref.getSharedPreferences().getString("name", "");
+        String job = GSharedPref.getSharedPreferences().getString("job", "");
+        View view = navigationView.getHeaderView(0);
+
+        TextView txt_name = view.findViewById(R.id.txt_name);
+        TextView txt_job = view.findViewById(R.id.txt_job);
+
+        txt_name.setText(name);
+        txt_job.setText(job);
     }
 
 
