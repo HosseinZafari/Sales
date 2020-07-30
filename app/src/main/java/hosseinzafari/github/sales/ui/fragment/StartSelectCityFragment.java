@@ -38,7 +38,7 @@ import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.adapter.RecyclerViewCityAdapter;
 import hosseinzafari.github.sales.core.G;
 import hosseinzafari.github.sales.data.local.memory.GDataMemoryKt;
-import hosseinzafari.github.sales.ui.activity.ActivityLogin;
+import hosseinzafari.github.sales.ui.activity.LoginActivity;
 import hosseinzafari.github.sales.util.GToast;
 import hosseinzafari.github.sales.util.UtilActivity;
 
@@ -78,7 +78,7 @@ public class StartSelectCityFragment extends Fragment {
             }
 
             // TODO must change to ActivityMain
-            UtilActivity.goActivity(ActivityLogin.class);
+            UtilActivity.goActivity(LoginActivity.class);
             G.currentActivity.finish();
         });
     }

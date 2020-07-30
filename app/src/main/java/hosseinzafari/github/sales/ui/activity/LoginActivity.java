@@ -31,7 +31,7 @@ import hosseinzafari.github.sales.R;
 import hosseinzafari.github.sales.core.GAppCompatActivity;
 import hosseinzafari.github.sales.util.UtilActivity;
 
-public class ActivityLogin extends GAppCompatActivity {
+public class LoginActivity extends GAppCompatActivity {
     private TextView textView;
 
     @Override
