@@ -35,6 +35,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
@@ -74,4 +75,10 @@ public class UtilActivity {
         G.currentActivity.startActivity(new Intent(G.currentActivity, clazz));
     }
 
+    public static void goActivityWithFinish(@NotNull Class clazz){
+        goActivity(clazz);
+        G.currentActivity.finish();
+    }
+
+    public static String getFromEditText(EditText editText) { return editText.getText().toString().trim(); }
 }
