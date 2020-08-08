@@ -41,7 +41,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GService {
 
-    private static final String BASE_URL = "http://192.168.0.4/sales/";
+    private static final String BASE_URL = "http://192.168.1.6/sales/v1/";
     private static Retrofit retrofit;
     private static OkHttpClient okHtpp;
     private static HttpLoggingInterceptor loggingInterceptor;
