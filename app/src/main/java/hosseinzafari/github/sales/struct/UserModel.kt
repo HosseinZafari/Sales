@@ -23,12 +23,18 @@
 
 package hosseinzafari.github.sales.struct
 
+/*
 
-import com.google.gson.annotations.SerializedName
+@created in 08/08/2020 - 08:57 PM
+@project Sales
+@author Hossein Zafari 
+@email  hosseinzafari2000@gmail.com 
+*/
 
-data class ResponseStdModel(
-    val code: Int, // 200
-    val desc: String, // you successfully singup
-    val msg: String ,  // success
-    val user: UserModel? = null
+data class UserModel(
+    var name: String ,
+    var family: String ,
+    var number: String ,
+    var job: String ,
+    var password : String ? = null
 )
