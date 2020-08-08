@@ -53,6 +53,15 @@ public class GSharedPref {
         sharedEdit.putString("name", name);
     }
 
+    public static void setFamily(String family) {
+        sharedEdit.putString("family", family);
+    }
+
+    public static void setNumber(String number) {
+        sharedEdit.putString("number", number);
+    }
+
+
     public static void setPassword(String password) {
         sharedEdit.putString("pass", password);
     }
