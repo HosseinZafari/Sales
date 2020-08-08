@@ -43,8 +43,17 @@ public interface Api {
     Single<ResponseStdModel> signup(
             @Field("name") String name ,
             @Field("family") String family ,
+            @Field("job") String job ,
             @Field("phoneNumber") String phoneNumber ,
             @Field("password") String password
+    );
+
+
+    @POST("login")
+    @FormUrlEncoded
+    Single<ResponseStdModel> login(
+      @Field("number") String number ,
+      @Field("password") String password
     );
 
 }
