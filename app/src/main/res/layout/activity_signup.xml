@@ -39,96 +39,123 @@
             android:layout_height="match_parent"
             android:padding="24dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/ic_person_add">
-
-        </androidx.appcompat.widget.AppCompatImageView>
+            app:srcCompat="@drawable/ic_person_add"/>
 
 
     </LinearLayout>
 
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_name_signup"
-        android:layout_width="310dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="252dp"
-        android:fontFamily="@font/iran_light"
-        android:gravity="right"
-        android:hint="شماره تلفن همراه خود را وارد کنید"
-        android:inputType="number"
-        android:maxLength="15"
-        android:maxLines="1"
-        android:textColor="@color/colorGrayDark"
-        android:textColorHint="@color/colorGray4"
-        android:textDirection="rtl"
-        android:textSize="@dimen/font_sm">
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/padding_highx4"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
 
-    </androidx.appcompat.widget.AppCompatEditText>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_name_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_std"
+            android:fontFamily="@font/iran_light"
+            android:gravity="right"
+            android:hint="نام"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="@color/colorGray4"
+            android:textDirection="rtl"
+            android:textSize="@dimen/font_sm" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_pass_signup"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="312dp"
-        android:fontFamily="@font/iran_light"
-        android:gravity="right"
-        android:hint="رمز عبور خود را وارد کنید"
-        android:inputType="textPassword"
-        android:maxLength="20"
-        android:maxLines="1"
-        android:textColor="@color/colorGrayDark"
-        android:textColorHint="@color/colorGray4"
-        android:textSize="@dimen/font_sm" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_family_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_light"
+            android:gravity="right"
+            android:layout_marginTop="@dimen/margin_std"
+            android:hint="نام خانوادگی"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="@color/colorGray4"
+            android:textDirection="rtl"
+            android:textSize="@dimen/font_sm" />
 
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edt_pass_reenter"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="372dp"
-        android:fontFamily="@font/iran_light"
-        android:gravity="right"
-        android:hint="رمز عبور خود را دوباره وارد کنید"
-        android:inputType="textPassword"
-        android:layoutDirection="rtl"
-        android:maxLength="20"
-        android:maxLines="1"
-        android:textColor="@color/colorGrayDark"
-        android:textColorHint="@color/colorGray4"
-        android:textDirection="rtl"
-        android:textSize="@dimen/font_sm" />
-
-
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spinner_jobs"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/edt_pass_reenter"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:layout_marginTop="@dimen/margin_highx4"
-        android:layoutDirection="rtl"
-        android:textDirection="rtl" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_number_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_light"
+            android:gravity="right"
+            android:hint="شماره همراه"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:textColor="@color/colorGrayDark"
+            android:layout_marginTop="@dimen/margin_std"
+            android:textColorHint="@color/colorGray4"
+            android:textDirection="rtl"
+            android:textSize="@dimen/font_sm" />
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signup"
-        style="@style/Button_fill"
-        android:layout_width="180dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/spinner_jobs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_highx4"
-        android:fontFamily="@font/iran_light"
-        android:text="ثبت نام"
-        android:textSize="@dimen/font_sm">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_pass_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_light"
+            android:gravity="right"
+            android:hint="رمز عبور خود را وارد کنید"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/margin_std"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="@color/colorGray4"
+            android:textSize="@dimen/font_sm" />
 
-    </com.google.android.material.button.MaterialButton>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_pass_reenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iran_light"
+            android:gravity="right"
+            android:hint="رمز عبور خود را دوباره وارد کنید"
+            android:layout_marginTop="@dimen/margin_std"
+            android:inputType="textPassword"
+            android:layoutDirection="rtl"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/colorGrayDark"
+            android:textColorHint="@color/colorGray4"
+            android:textDirection="rtl"
+            android:textSize="@dimen/font_sm" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_jobs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_highx4"
+            android:layoutDirection="rtl"
+            android:textAlignment="center"
+            android:textDirection="rtl" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signup"
+            style="@style/Button_fill"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/margin_highx4"
+            android:fontFamily="@font/iran_light"
+            android:text="ثبت نام"
+            android:textSize="@dimen/font_sm" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
